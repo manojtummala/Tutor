@@ -1,0 +1,3 @@
+[
+  { "id": "n5_sentence_001", "type": "sentence", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-self-introduction", "japanese": "私は学生です。", "reading": "わたしはがくせいです。", "romaji": "watashi wa gakusei desu", "meaning": "I am a student.", "metadata": { "grammarIds": ["n5_grammar_wa_desu"], "vocabIds": ["n5_vocab_watashi", "n5_vocab_gakusei"] } }
+]

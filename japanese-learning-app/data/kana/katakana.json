@@ -1,0 +1,7 @@
+[
+  { "id": "katakana_a", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "katakana-vowels", "japanese": "ア", "reading": "a", "romaji": "a", "meaning": "katakana character for a", "metadata": { "script": "katakana", "row": "vowel", "variationType": "basic" } },
+  { "id": "katakana_i", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "katakana-vowels", "japanese": "イ", "reading": "i", "romaji": "i", "meaning": "katakana character for i", "metadata": { "script": "katakana", "row": "vowel", "variationType": "basic" } },
+  { "id": "katakana_u", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "katakana-vowels", "japanese": "ウ", "reading": "u", "romaji": "u", "meaning": "katakana character for u", "metadata": { "script": "katakana", "row": "vowel", "variationType": "basic" } },
+  { "id": "katakana_e", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "katakana-vowels", "japanese": "エ", "reading": "e", "romaji": "e", "meaning": "katakana character for e", "metadata": { "script": "katakana", "row": "vowel", "variationType": "basic" } },
+  { "id": "katakana_o", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "katakana-vowels", "japanese": "オ", "reading": "o", "romaji": "o", "meaning": "katakana character for o", "metadata": { "script": "katakana", "row": "vowel", "variationType": "basic" } }
+]

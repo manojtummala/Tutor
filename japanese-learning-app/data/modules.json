@@ -1,0 +1,18 @@
+[
+  {
+    "id": "kana-foundations",
+    "title": "Kana Foundations",
+    "description": "Learn hiragana, katakana, and kana variations from zero.",
+    "level": "kana",
+    "orderIndex": 1,
+    "isUnlocked": true
+  },
+  {
+    "id": "jlpt-n5",
+    "title": "JLPT N5",
+    "description": "Beginner vocabulary, kanji, grammar, and sentence practice.",
+    "level": "N5",
+    "orderIndex": 2,
+    "isUnlocked": false
+  }
+]

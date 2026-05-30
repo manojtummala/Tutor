@@ -1,0 +1,6 @@
+[
+  { "id": "hiragana_ga", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "kana-variations-intro", "japanese": "が", "reading": "ga", "romaji": "ga", "meaning": "dakuten variation of か", "metadata": { "script": "hiragana", "row": "g", "variationType": "dakuten" } },
+  { "id": "hiragana_pa", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "kana-variations-intro", "japanese": "ぱ", "reading": "pa", "romaji": "pa", "meaning": "handakuten variation of は", "metadata": { "script": "hiragana", "row": "p", "variationType": "handakuten" } },
+  { "id": "hiragana_kya", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "kana-variations-intro", "japanese": "きゃ", "reading": "kya", "romaji": "kya", "meaning": "yoon combination for kya", "metadata": { "script": "hiragana", "row": "yoon", "variationType": "combination" } },
+  { "id": "hiragana_small_tsu", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "kana-variations-intro", "japanese": "っ", "reading": "small tsu", "romaji": "small tsu", "meaning": "marks a doubled consonant", "metadata": { "script": "hiragana", "row": "special", "variationType": "small-tsu" } }
+]

@@ -1,0 +1,3 @@
+[
+  { "id": "n5_grammar_wa_desu", "type": "grammar", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-self-introduction", "japanese": "A は B です", "reading": "A wa B desu", "romaji": null, "meaning": "A is B", "explanation": "Used to state that A is B. は marks the topic.", "metadata": { "pattern": "A は B です", "examples": [{ "ja": "私は学生です。", "kana": "わたしはがくせいです。", "en": "I am a student." }] } }
+]

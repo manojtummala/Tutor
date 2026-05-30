@@ -1,0 +1,3 @@
+[
+  { "id": "n5_kanji_person", "type": "kanji", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-self-introduction", "japanese": "人", "reading": "ひと / ジン / ニン", "romaji": "hito / jin / nin", "meaning": "person", "metadata": { "onyomi": ["ジン", "ニン"], "kunyomi": ["ひと"], "strokeCount": 2 } }
+]

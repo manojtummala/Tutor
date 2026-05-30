@@ -1,0 +1,56 @@
+[
+  {
+    "id": "hiragana-vowels",
+    "moduleId": "kana-foundations",
+    "title": "Hiragana Vowels",
+    "description": "Learn あ, い, う, え, お.",
+    "orderIndex": 1,
+    "lessonType": "kana",
+    "isUnlocked": true
+  },
+  {
+    "id": "hiragana-k-row",
+    "moduleId": "kana-foundations",
+    "title": "Hiragana K-row",
+    "description": "Learn か, き, く, け, こ.",
+    "orderIndex": 2,
+    "lessonType": "kana",
+    "isUnlocked": true
+  },
+  {
+    "id": "hiragana-s-row",
+    "moduleId": "kana-foundations",
+    "title": "Hiragana S-row",
+    "description": "Learn さ, し, す, せ, そ.",
+    "orderIndex": 3,
+    "lessonType": "kana",
+    "isUnlocked": false
+  },
+  {
+    "id": "katakana-vowels",
+    "moduleId": "kana-foundations",
+    "title": "Katakana Vowels",
+    "description": "Learn ア, イ, ウ, エ, オ.",
+    "orderIndex": 4,
+    "lessonType": "kana",
+    "isUnlocked": false
+  },
+  {
+    "id": "kana-variations-intro",
+    "moduleId": "kana-foundations",
+    "title": "Kana Variations Intro",
+    "description": "Meet dakuten, handakuten, small tsu, and long vowels.",
+    "orderIndex": 5,
+    "lessonType": "kana",
+    "isUnlocked": false
+  },
+  {
+    "id": "n5-self-introduction",
+    "moduleId": "jlpt-n5",
+    "title": "Self Introduction",
+    "description": "Starter N5 words, grammar, and sentences for introducing yourself.",
+    "orderIndex": 1,
+    "lessonType": "mixed",
+    "isUnlocked": false
+  }
+]

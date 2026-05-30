@@ -1,0 +1,4 @@
+[
+  { "id": "n5_vocab_watashi", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-self-introduction", "japanese": "私", "reading": "わたし", "romaji": "watashi", "meaning": "I; me", "metadata": { "partOfSpeech": "pronoun" } },
+  { "id": "n5_vocab_gakusei", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-self-introduction", "japanese": "学生", "reading": "がくせい", "romaji": "gakusei", "meaning": "student", "metadata": { "partOfSpeech": "noun" } }
+]
