@@ -1,17 +1,784 @@
 [
-  { "id": "hiragana_a", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "hiragana-vowels", "japanese": "あ", "reading": "a", "romaji": "a", "meaning": "hiragana character for a", "metadata": { "script": "hiragana", "row": "vowel", "variationType": "basic" } },
-  { "id": "hiragana_i", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "hiragana-vowels", "japanese": "い", "reading": "i", "romaji": "i", "meaning": "hiragana character for i", "metadata": { "script": "hiragana", "row": "vowel", "variationType": "basic" } },
-  { "id": "hiragana_u", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "hiragana-vowels", "japanese": "う", "reading": "u", "romaji": "u", "meaning": "hiragana character for u", "metadata": { "script": "hiragana", "row": "vowel", "variationType": "basic" } },
-  { "id": "hiragana_e", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "hiragana-vowels", "japanese": "え", "reading": "e", "romaji": "e", "meaning": "hiragana character for e", "metadata": { "script": "hiragana", "row": "vowel", "variationType": "basic" } },
-  { "id": "hiragana_o", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "hiragana-vowels", "japanese": "お", "reading": "o", "romaji": "o", "meaning": "hiragana character for o", "metadata": { "script": "hiragana", "row": "vowel", "variationType": "basic" } },
-  { "id": "hiragana_ka", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "hiragana-k-row", "japanese": "か", "reading": "ka", "romaji": "ka", "meaning": "hiragana character for ka", "metadata": { "script": "hiragana", "row": "k", "variationType": "basic" } },
-  { "id": "hiragana_ki", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "hiragana-k-row", "japanese": "き", "reading": "ki", "romaji": "ki", "meaning": "hiragana character for ki", "metadata": { "script": "hiragana", "row": "k", "variationType": "basic" } },
-  { "id": "hiragana_ku", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "hiragana-k-row", "japanese": "く", "reading": "ku", "romaji": "ku", "meaning": "hiragana character for ku", "metadata": { "script": "hiragana", "row": "k", "variationType": "basic" } },
-  { "id": "hiragana_ke", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "hiragana-k-row", "japanese": "け", "reading": "ke", "romaji": "ke", "meaning": "hiragana character for ke", "metadata": { "script": "hiragana", "row": "k", "variationType": "basic" } },
-  { "id": "hiragana_ko", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "hiragana-k-row", "japanese": "こ", "reading": "ko", "romaji": "ko", "meaning": "hiragana character for ko", "metadata": { "script": "hiragana", "row": "k", "variationType": "basic" } },
-  { "id": "hiragana_sa", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "hiragana-s-row", "japanese": "さ", "reading": "sa", "romaji": "sa", "meaning": "hiragana character for sa", "metadata": { "script": "hiragana", "row": "s", "variationType": "basic" } },
-  { "id": "hiragana_shi", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "hiragana-s-row", "japanese": "し", "reading": "shi", "romaji": "shi", "meaning": "hiragana character for shi", "metadata": { "script": "hiragana", "row": "s", "variationType": "basic" } },
-  { "id": "hiragana_su", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "hiragana-s-row", "japanese": "す", "reading": "su", "romaji": "su", "meaning": "hiragana character for su", "metadata": { "script": "hiragana", "row": "s", "variationType": "basic" } },
-  { "id": "hiragana_se", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "hiragana-s-row", "japanese": "せ", "reading": "se", "romaji": "se", "meaning": "hiragana character for se", "metadata": { "script": "hiragana", "row": "s", "variationType": "basic" } },
-  { "id": "hiragana_so", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "hiragana-s-row", "japanese": "そ", "reading": "so", "romaji": "so", "meaning": "hiragana character for so", "metadata": { "script": "hiragana", "row": "s", "variationType": "basic" } }
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_a_3042",
+    "lessonId": "hiragana-vowels",
+    "japanese": "あ",
+    "reading": "a",
+    "romaji": "a",
+    "meaning": "hiragana character for a",
+    "audioSrc": "/audio/kana/a.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "vowel",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_i_3044",
+    "lessonId": "hiragana-vowels",
+    "japanese": "い",
+    "reading": "i",
+    "romaji": "i",
+    "meaning": "hiragana character for i",
+    "audioSrc": "/audio/kana/i.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "vowel",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_u_3046",
+    "lessonId": "hiragana-vowels",
+    "japanese": "う",
+    "reading": "u",
+    "romaji": "u",
+    "meaning": "hiragana character for u",
+    "audioSrc": "/audio/kana/u.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "vowel",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_e_3048",
+    "lessonId": "hiragana-vowels",
+    "japanese": "え",
+    "reading": "e",
+    "romaji": "e",
+    "meaning": "hiragana character for e",
+    "audioSrc": "/audio/kana/e.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "vowel",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_o_304a",
+    "lessonId": "hiragana-vowels",
+    "japanese": "お",
+    "reading": "o",
+    "romaji": "o",
+    "meaning": "hiragana character for o",
+    "audioSrc": "/audio/kana/o.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "vowel",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ka_304b",
+    "lessonId": "hiragana-k-row",
+    "japanese": "か",
+    "reading": "ka",
+    "romaji": "ka",
+    "meaning": "hiragana character for ka",
+    "audioSrc": "/audio/kana/ka.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "k",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ki_304d",
+    "lessonId": "hiragana-k-row",
+    "japanese": "き",
+    "reading": "ki",
+    "romaji": "ki",
+    "meaning": "hiragana character for ki",
+    "audioSrc": "/audio/kana/ki.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "k",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ku_304f",
+    "lessonId": "hiragana-k-row",
+    "japanese": "く",
+    "reading": "ku",
+    "romaji": "ku",
+    "meaning": "hiragana character for ku",
+    "audioSrc": "/audio/kana/ku.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "k",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ke_3051",
+    "lessonId": "hiragana-k-row",
+    "japanese": "け",
+    "reading": "ke",
+    "romaji": "ke",
+    "meaning": "hiragana character for ke",
+    "audioSrc": "/audio/kana/ke.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "k",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ko_3053",
+    "lessonId": "hiragana-k-row",
+    "japanese": "こ",
+    "reading": "ko",
+    "romaji": "ko",
+    "meaning": "hiragana character for ko",
+    "audioSrc": "/audio/kana/ko.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "k",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_sa_3055",
+    "lessonId": "hiragana-s-row",
+    "japanese": "さ",
+    "reading": "sa",
+    "romaji": "sa",
+    "meaning": "hiragana character for sa",
+    "audioSrc": "/audio/kana/sa.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "s",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_shi_3057",
+    "lessonId": "hiragana-s-row",
+    "japanese": "し",
+    "reading": "shi",
+    "romaji": "shi",
+    "meaning": "hiragana character for shi",
+    "audioSrc": "/audio/kana/shi.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "s",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_su_3059",
+    "lessonId": "hiragana-s-row",
+    "japanese": "す",
+    "reading": "su",
+    "romaji": "su",
+    "meaning": "hiragana character for su",
+    "audioSrc": "/audio/kana/su.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "s",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_se_305b",
+    "lessonId": "hiragana-s-row",
+    "japanese": "せ",
+    "reading": "se",
+    "romaji": "se",
+    "meaning": "hiragana character for se",
+    "audioSrc": "/audio/kana/se.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "s",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_so_305d",
+    "lessonId": "hiragana-s-row",
+    "japanese": "そ",
+    "reading": "so",
+    "romaji": "so",
+    "meaning": "hiragana character for so",
+    "audioSrc": "/audio/kana/so.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "s",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ta_305f",
+    "lessonId": "hiragana-t-row",
+    "japanese": "た",
+    "reading": "ta",
+    "romaji": "ta",
+    "meaning": "hiragana character for ta",
+    "audioSrc": "/audio/kana/ta.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "t",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_chi_3061",
+    "lessonId": "hiragana-t-row",
+    "japanese": "ち",
+    "reading": "chi",
+    "romaji": "chi",
+    "meaning": "hiragana character for chi",
+    "audioSrc": "/audio/kana/chi.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "t",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_tsu_3064",
+    "lessonId": "hiragana-t-row",
+    "japanese": "つ",
+    "reading": "tsu",
+    "romaji": "tsu",
+    "meaning": "hiragana character for tsu",
+    "audioSrc": "/audio/kana/tsu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "t",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_te_3066",
+    "lessonId": "hiragana-t-row",
+    "japanese": "て",
+    "reading": "te",
+    "romaji": "te",
+    "meaning": "hiragana character for te",
+    "audioSrc": "/audio/kana/te.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "t",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_to_3068",
+    "lessonId": "hiragana-t-row",
+    "japanese": "と",
+    "reading": "to",
+    "romaji": "to",
+    "meaning": "hiragana character for to",
+    "audioSrc": "/audio/kana/to.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "t",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_na_306a",
+    "lessonId": "hiragana-n-row",
+    "japanese": "な",
+    "reading": "na",
+    "romaji": "na",
+    "meaning": "hiragana character for na",
+    "audioSrc": "/audio/kana/na.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "n",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ni_306b",
+    "lessonId": "hiragana-n-row",
+    "japanese": "に",
+    "reading": "ni",
+    "romaji": "ni",
+    "meaning": "hiragana character for ni",
+    "audioSrc": "/audio/kana/ni.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "n",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_nu_306c",
+    "lessonId": "hiragana-n-row",
+    "japanese": "ぬ",
+    "reading": "nu",
+    "romaji": "nu",
+    "meaning": "hiragana character for nu",
+    "audioSrc": "/audio/kana/nu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "n",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ne_306d",
+    "lessonId": "hiragana-n-row",
+    "japanese": "ね",
+    "reading": "ne",
+    "romaji": "ne",
+    "meaning": "hiragana character for ne",
+    "audioSrc": "/audio/kana/ne.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "n",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_no_306e",
+    "lessonId": "hiragana-n-row",
+    "japanese": "の",
+    "reading": "no",
+    "romaji": "no",
+    "meaning": "hiragana character for no",
+    "audioSrc": "/audio/kana/no.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "n",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ha_306f",
+    "lessonId": "hiragana-h-row",
+    "japanese": "は",
+    "reading": "ha",
+    "romaji": "ha",
+    "meaning": "hiragana character for ha",
+    "audioSrc": "/audio/kana/ha.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "h",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_hi_3072",
+    "lessonId": "hiragana-h-row",
+    "japanese": "ひ",
+    "reading": "hi",
+    "romaji": "hi",
+    "meaning": "hiragana character for hi",
+    "audioSrc": "/audio/kana/hi.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "h",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_fu_3075",
+    "lessonId": "hiragana-h-row",
+    "japanese": "ふ",
+    "reading": "fu",
+    "romaji": "fu",
+    "meaning": "hiragana character for fu",
+    "audioSrc": "/audio/kana/fu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "h",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_he_3078",
+    "lessonId": "hiragana-h-row",
+    "japanese": "へ",
+    "reading": "he",
+    "romaji": "he",
+    "meaning": "hiragana character for he",
+    "audioSrc": "/audio/kana/he.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "h",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ho_307b",
+    "lessonId": "hiragana-h-row",
+    "japanese": "ほ",
+    "reading": "ho",
+    "romaji": "ho",
+    "meaning": "hiragana character for ho",
+    "audioSrc": "/audio/kana/ho.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "h",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ma_307e",
+    "lessonId": "hiragana-m-row",
+    "japanese": "ま",
+    "reading": "ma",
+    "romaji": "ma",
+    "meaning": "hiragana character for ma",
+    "audioSrc": "/audio/kana/ma.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "m",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_mi_307f",
+    "lessonId": "hiragana-m-row",
+    "japanese": "み",
+    "reading": "mi",
+    "romaji": "mi",
+    "meaning": "hiragana character for mi",
+    "audioSrc": "/audio/kana/mi.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "m",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_mu_3080",
+    "lessonId": "hiragana-m-row",
+    "japanese": "む",
+    "reading": "mu",
+    "romaji": "mu",
+    "meaning": "hiragana character for mu",
+    "audioSrc": "/audio/kana/mu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "m",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_me_3081",
+    "lessonId": "hiragana-m-row",
+    "japanese": "め",
+    "reading": "me",
+    "romaji": "me",
+    "meaning": "hiragana character for me",
+    "audioSrc": "/audio/kana/me.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "m",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_mo_3082",
+    "lessonId": "hiragana-m-row",
+    "japanese": "も",
+    "reading": "mo",
+    "romaji": "mo",
+    "meaning": "hiragana character for mo",
+    "audioSrc": "/audio/kana/mo.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "m",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ya_3084",
+    "lessonId": "hiragana-y-row",
+    "japanese": "や",
+    "reading": "ya",
+    "romaji": "ya",
+    "meaning": "hiragana character for ya",
+    "audioSrc": "/audio/kana/ya.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "y",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_yu_3086",
+    "lessonId": "hiragana-y-row",
+    "japanese": "ゆ",
+    "reading": "yu",
+    "romaji": "yu",
+    "meaning": "hiragana character for yu",
+    "audioSrc": "/audio/kana/yu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "y",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_yo_3088",
+    "lessonId": "hiragana-y-row",
+    "japanese": "よ",
+    "reading": "yo",
+    "romaji": "yo",
+    "meaning": "hiragana character for yo",
+    "audioSrc": "/audio/kana/yo.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "y",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ra_3089",
+    "lessonId": "hiragana-r-row",
+    "japanese": "ら",
+    "reading": "ra",
+    "romaji": "ra",
+    "meaning": "hiragana character for ra",
+    "audioSrc": "/audio/kana/ra.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "r",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ri_308a",
+    "lessonId": "hiragana-r-row",
+    "japanese": "り",
+    "reading": "ri",
+    "romaji": "ri",
+    "meaning": "hiragana character for ri",
+    "audioSrc": "/audio/kana/ri.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "r",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ru_308b",
+    "lessonId": "hiragana-r-row",
+    "japanese": "る",
+    "reading": "ru",
+    "romaji": "ru",
+    "meaning": "hiragana character for ru",
+    "audioSrc": "/audio/kana/ru.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "r",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_re_308c",
+    "lessonId": "hiragana-r-row",
+    "japanese": "れ",
+    "reading": "re",
+    "romaji": "re",
+    "meaning": "hiragana character for re",
+    "audioSrc": "/audio/kana/re.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "r",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ro_308d",
+    "lessonId": "hiragana-r-row",
+    "japanese": "ろ",
+    "reading": "ro",
+    "romaji": "ro",
+    "meaning": "hiragana character for ro",
+    "audioSrc": "/audio/kana/ro.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "r",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_wa_308f",
+    "lessonId": "hiragana-w-row",
+    "japanese": "わ",
+    "reading": "wa",
+    "romaji": "wa",
+    "meaning": "hiragana character for wa",
+    "audioSrc": "/audio/kana/wa.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "w",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_wo_3092",
+    "lessonId": "hiragana-w-row",
+    "japanese": "を",
+    "reading": "wo",
+    "romaji": "wo",
+    "meaning": "hiragana character for wo",
+    "audioSrc": "/audio/kana/wo.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "w",
+      "variationType": "basic"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_n_3093",
+    "lessonId": "hiragana-n-final",
+    "japanese": "ん",
+    "reading": "n",
+    "romaji": "n",
+    "meaning": "hiragana character for n",
+    "audioSrc": "/audio/kana/n.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "n-final",
+      "variationType": "basic"
+    }
+  }
 ]

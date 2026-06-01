@@ -9,7 +9,7 @@ import n5VocabularyData from "@/data/jlpt/n5_vocab.json";
 import n5KanjiData from "@/data/jlpt/n5_kanji.json";
 import n5GrammarData from "@/data/jlpt/n5_grammar.json";
 import n5SentencesData from "@/data/jlpt/n5_sentences.json";
-import { dailyStats, learningItems, lessons, modules, streaks, userItemProgress } from "./schema";
+import { dailyStats, learningItems, lessons, modules, practiceAttempts, streaks, userItemProgress } from "./schema";
 
 const sqlite = new Database("local.db");
 const db = drizzle(sqlite);
@@ -59,6 +59,7 @@ function createTables() {
       reading TEXT,
       romaji TEXT,
       meaning TEXT NOT NULL,
+      audio_src TEXT,
       explanation TEXT,
       metadata_json TEXT,
       created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -74,6 +75,11 @@ function createTables() {
       due_at TEXT,
       correct_count INTEGER NOT NULL DEFAULT 0,
       wrong_count INTEGER NOT NULL DEFAULT 0,
+      introduced_at TEXT,
+      correct_attempt_count INTEGER NOT NULL DEFAULT 0,
+      practice_attempt_count INTEGER NOT NULL DEFAULT 0,
+      target_correct_attempts INTEGER NOT NULL DEFAULT 5,
+      learned_at TEXT,
       last_reviewed_at TEXT,
       created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
       updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -113,12 +119,29 @@ function createTables() {
       updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
     );
   `);
+
+  const columns = sqlite.prepare("PRAGMA table_info(learning_items)").all() as { name: string }[];
+  if (!columns.some((column) => column.name === "audio_src")) {
+    sqlite.exec("ALTER TABLE learning_items ADD COLUMN audio_src TEXT");
+  }
+  const progressColumns = sqlite.prepare("PRAGMA table_info(user_item_progress)").all() as { name: string }[];
+  const addProgressColumn = (name: string, definition: string) => {
+    if (!progressColumns.some((column) => column.name === name)) {
+      sqlite.exec(`ALTER TABLE user_item_progress ADD COLUMN ${definition}`);
+    }
+  };
+  addProgressColumn("introduced_at", "introduced_at TEXT");
+  addProgressColumn("correct_attempt_count", "correct_attempt_count INTEGER NOT NULL DEFAULT 0");
+  addProgressColumn("practice_attempt_count", "practice_attempt_count INTEGER NOT NULL DEFAULT 0");
+  addProgressColumn("target_correct_attempts", "target_correct_attempts INTEGER NOT NULL DEFAULT 5");
+  addProgressColumn("learned_at", "learned_at TEXT");
 }
 
 async function seed() {
   createTables();
 
   await db.delete(userItemProgress);
+  await db.delete(practiceAttempts);
   await db.delete(learningItems);
   await db.delete(lessons);
   await db.delete(modules);
@@ -138,6 +161,7 @@ async function seed() {
       reading: item.reading ?? null,
       romaji: item.romaji ?? null,
       meaning: item.meaning,
+      audioSrc: "audioSrc" in item ? item.audioSrc ?? null : null,
       explanation: "explanation" in item ? item.explanation ?? null : null,
       metadataJson: JSON.stringify(item.metadata ?? {}),
     })),
@@ -147,6 +171,7 @@ async function seed() {
       id: `${item.id}_progress`,
       itemId: item.id,
       status: "new" as const,
+      targetCorrectAttempts: 5,
     })),
   );
   await db.insert(streaks).values({ id: "personal" });

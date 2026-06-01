@@ -1,69 +1,74 @@
-right now everythign is just stall incomplete data. 
+Agent Practice is now reaching LM Studio successfully with Qwen2.5 3B Instruct MLX 4-bit, and JSON parsing works. The current failure is validation quantity/quality, not timeout.
 
-also for library, can we have a sections of hiragana, katakana and kanji so there is clear seperation rather than just dumping all of the seed data in the library combined. so that then above the charatcer, we wont need kana everytime and below it the text can be just romaji or word than "hiragana for ..."
+Observed result:
+- LM Studio returned valid JSON.
+- 3 of 6 questions passed validation.
+- The valid questions were multiple_choice.
+- The invalid question was fill_blank and had schema problems:
+  - correctAnswer was an array instead of a string
+  - it added naturalSentenceBlocks instead of naturalSentence
+  - it used choices like "A. 日本語"
+  - it introduced vocabulary outside the allowed starter content
+  - it used inconsistent punctuation
+- The model generated only 4 questions even though the app expected up to 8 candidates.
 
-Populate the Kana Foundations module properly and add a speaker icon for pronunciation on learning/practice/review/library screens and other wherever character will be used.
+Please update Agent Practice v1 to be more reliable for local small models.
 
-Important:
-- Kana is standard. Do not scrape copyrighted lesson text.
-- Use standard kana chart references only to verify mappings.
-- If web search is available, check standard references such as Wikibooks Japanese/Kana chart for kana/romaji mappings and yōon combinations.
-- Do not block implementation on downloading audio files.
-- Implement local audio support with browser TTS fallback.
+Goals:
 
-Tasks:
+1. Add a stable generation profile for MVP
+   - Default Agent Practice v1 should use only `multiple_choice`.
+   - Do not request `fill_blank` by default.
+   - Do not request `sentence_reorder` by default unless the code already handles it very reliably.
+   - Keep `sentence_reorder` and `fill_blank` types in the code for future use, but do not include them in the default generation prompt yet.
 
-1. Update schema
-- Add `audioSrc` to `learning_items`.
-- Make sure seed/import logic reads `audioSrc` from JSON.
+2. Change valid-question threshold behavior
+   - Target valid questions: 6.
+   - Minimum acceptable valid questions: 3.
+   - If validation returns 6 or more valid questions, start a 6-question session.
+   - If validation returns 3–5 valid questions, start a shorter session with those valid questions.
+   - If fewer than 3 valid questions pass validation, show the friendly validation failure.
+   - Update UI copy to make this clear:
+     "Target 6 questions. Shorter sessions may start if fewer valid questions are generated."
 
-2. Create complete kana seed data
-Create or update:
-- `data/kana/hiragana.json`
-- `data/kana/katakana.json`
-- `data/kana/variations.json`
+3. Reduce candidate count slightly
+   - Ask for up to 6 candidate questions in stable mode.
+   - Select up to 6 valid questions.
+   - Minimum acceptable is 3.
 
-The kana data should include:
-- 46 basic hiragana
-- 46 basic katakana
-- dakuten kana
-- handakuten kana
-- yōon/compound kana such as kya, kyu, kyo, sha, shu, sho, cha, chu, cho, etc.
-- lesson-style entries or metadata for small っ/ッ, long vowels, and similar-looking kana drills if the current schema supports it.
+4. Strengthen the default prompt for multiple_choice only
+   The prompt should say:
+   - Return JSON only.
+   - Output shape must be `{ "questions": [...] }`.
+   - Generate up to 6 candidate questions.
+   - Use only type `multiple_choice`.
+   - Use only allowed vocabulary, allowed particles, allowed verbs, and safe templates.
+   - Do not add vocabulary outside the allowed content.
+   - `correctAnswer` must be a string.
+   - `correctAnswer` must exactly match one item in `choices`.
+   - `choices` must be an array of exactly 4 strings.
+   - Do not prefix choices with "A.", "B.", "C.", or "D.".
+   - Do not add fields that are not in the schema.
+   - Use `naturalSentence`, not `naturalSentenceBlocks`.
+   - Explanation must be one short English sentence.
 
-Each kana item should include:
-- id
-- type: "kana"
-- level: "kana"
-- moduleId: "kana-foundations"
-- lessonId
-- japanese
-- reading
-- romaji
-- meaning
-- audioSrc
-- metadata
+5. Keep validation strict
+   - Do not accept malformed fill_blank.
+   - Do not accept partial JSON.
+   - Do not weaken schema validation just to pass bad questions.
+   - But allow the session to start with 3+ valid questions.
 
-Use this audio path convention:
-`/audio/kana/{romaji}.mp3`
+6. Improve validation logging
+   - Log rejection reasons per question.
+   - Include question index, type, prompt, and reason.
+   - Example:
+     `Rejected question 4: fill_blank correctAnswer must be string`
+   - This will help tune the prompt.
 
-Examples:
-- あ and ア should both use `/audio/kana/a.mp3`
-- し and シ should both use `/audio/kana/shi.mp3`
-- きゃ and キャ should both use `/audio/kana/kya.mp3`
+7. Do not change Kana Practice
+   - Kana Practice must remain separate and unchanged.
 
-3. Add audio playback
-Create:
-- `hooks/use-audio-player.ts`
-- `components/audio/speaker-button.tsx`
-
-Speaker button behavior:
-- If `audioSrc` exists and the file can play, play it.
-- If no audio file exists or playback fails, fallback to browser `speechSynthesis`.
-- Use `SpeechSynthesisUtterance`.
-- Set `utterance.lang = "ja-JP"`.
-- Use a slightly slower rate, around `0.85`.
-
-update PROJECT_CONTEXT with the simple necessary information for the updates made.
-
-inclusing this, implement the next steps planned.
+Expected result:
+- With Qwen2.5 3B Instruct, Agent Practice should reliably produce at least 3 valid multiple-choice questions.
+- The app should start a shorter session instead of failing when 3–5 valid questions pass.
+- Later we can add sentence_reorder and fill_blank back after the base pipeline is stable.

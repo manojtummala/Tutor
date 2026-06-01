@@ -51,8 +51,8 @@ export function getLessonsForModule(moduleId: string): LessonWithItems[] {
 
 export function getKanaStats() {
   const kanaItems = learningItems.filter((item) => item.type === "kana");
-  const hiragana = kanaItems.filter((item) => item.metadata.script === "hiragana");
-  const katakana = kanaItems.filter((item) => item.metadata.script === "katakana");
+  const hiragana = kanaItems.filter((item) => item.metadata.script === "hiragana" && item.metadata.variationType === "basic");
+  const katakana = kanaItems.filter((item) => item.metadata.script === "katakana" && item.metadata.variationType === "basic");
   const variations = kanaItems.filter((item) => item.metadata.variationType !== "basic");
 
   return {
@@ -61,6 +61,17 @@ export function getKanaStats() {
     katakana: katakana.length,
     variations: variations.length,
     unlockedLessons: lessons.filter((lesson) => lesson.moduleId === "kana-foundations" && lesson.isUnlocked).length,
+  };
+}
+
+export function getKanaSections() {
+  const kanaItems = learningItems.filter((item) => item.type === "kana");
+
+  return {
+    hiragana: kanaItems.filter((item) => item.metadata.script === "hiragana" && item.metadata.variationType === "basic"),
+    katakana: kanaItems.filter((item) => item.metadata.script === "katakana" && item.metadata.variationType === "basic"),
+    variations: kanaItems.filter((item) => item.metadata.variationType !== "basic"),
+    kanji: learningItems.filter((item) => item.type === "kanji"),
   };
 }
 

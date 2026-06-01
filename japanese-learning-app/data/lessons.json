@@ -1,56 +1,34 @@
 [
-  {
-    "id": "hiragana-vowels",
-    "moduleId": "kana-foundations",
-    "title": "Hiragana Vowels",
-    "description": "Learn あ, い, う, え, お.",
-    "orderIndex": 1,
-    "lessonType": "kana",
-    "isUnlocked": true
-  },
-  {
-    "id": "hiragana-k-row",
-    "moduleId": "kana-foundations",
-    "title": "Hiragana K-row",
-    "description": "Learn か, き, く, け, こ.",
-    "orderIndex": 2,
-    "lessonType": "kana",
-    "isUnlocked": true
-  },
-  {
-    "id": "hiragana-s-row",
-    "moduleId": "kana-foundations",
-    "title": "Hiragana S-row",
-    "description": "Learn さ, し, す, せ, そ.",
-    "orderIndex": 3,
-    "lessonType": "kana",
-    "isUnlocked": false
-  },
-  {
-    "id": "katakana-vowels",
-    "moduleId": "kana-foundations",
-    "title": "Katakana Vowels",
-    "description": "Learn ア, イ, ウ, エ, オ.",
-    "orderIndex": 4,
-    "lessonType": "kana",
-    "isUnlocked": false
-  },
-  {
-    "id": "kana-variations-intro",
-    "moduleId": "kana-foundations",
-    "title": "Kana Variations Intro",
-    "description": "Meet dakuten, handakuten, small tsu, and long vowels.",
-    "orderIndex": 5,
-    "lessonType": "kana",
-    "isUnlocked": false
-  },
-  {
-    "id": "n5-self-introduction",
-    "moduleId": "jlpt-n5",
-    "title": "Self Introduction",
-    "description": "Starter N5 words, grammar, and sentences for introducing yourself.",
-    "orderIndex": 1,
-    "lessonType": "mixed",
-    "isUnlocked": false
-  }
+  { "id": "hiragana-vowels", "moduleId": "kana-foundations", "title": "Hiragana Vowels", "description": "Learn あ, い, う, え, お.", "orderIndex": 1, "lessonType": "kana", "isUnlocked": true },
+  { "id": "hiragana-k-row", "moduleId": "kana-foundations", "title": "Hiragana K-row", "description": "Learn か, き, く, け, こ.", "orderIndex": 2, "lessonType": "kana", "isUnlocked": true },
+  { "id": "hiragana-s-row", "moduleId": "kana-foundations", "title": "Hiragana S-row", "description": "Learn さ, し, す, せ, そ.", "orderIndex": 3, "lessonType": "kana", "isUnlocked": true },
+  { "id": "hiragana-t-row", "moduleId": "kana-foundations", "title": "Hiragana T-row", "description": "Learn た, ち, つ, て, と.", "orderIndex": 4, "lessonType": "kana", "isUnlocked": false },
+  { "id": "hiragana-n-row", "moduleId": "kana-foundations", "title": "Hiragana N-row", "description": "Learn な, に, ぬ, ね, の.", "orderIndex": 5, "lessonType": "kana", "isUnlocked": false },
+  { "id": "hiragana-h-row", "moduleId": "kana-foundations", "title": "Hiragana H-row", "description": "Learn は, ひ, ふ, へ, ほ.", "orderIndex": 6, "lessonType": "kana", "isUnlocked": false },
+  { "id": "hiragana-m-row", "moduleId": "kana-foundations", "title": "Hiragana M-row", "description": "Learn ま, み, む, め, も.", "orderIndex": 7, "lessonType": "kana", "isUnlocked": false },
+  { "id": "hiragana-y-row", "moduleId": "kana-foundations", "title": "Hiragana Y-row", "description": "Learn や, ゆ, よ.", "orderIndex": 8, "lessonType": "kana", "isUnlocked": false },
+  { "id": "hiragana-r-row", "moduleId": "kana-foundations", "title": "Hiragana R-row", "description": "Learn ら, り, る, れ, ろ.", "orderIndex": 9, "lessonType": "kana", "isUnlocked": false },
+  { "id": "hiragana-w-row", "moduleId": "kana-foundations", "title": "Hiragana W-row", "description": "Learn わ and を.", "orderIndex": 10, "lessonType": "kana", "isUnlocked": false },
+  { "id": "hiragana-n-final", "moduleId": "kana-foundations", "title": "Hiragana ん", "description": "Learn the final nasal ん.", "orderIndex": 11, "lessonType": "kana", "isUnlocked": false },
+
+  { "id": "katakana-vowels", "moduleId": "kana-foundations", "title": "Katakana Vowels", "description": "Learn ア, イ, ウ, エ, オ.", "orderIndex": 12, "lessonType": "kana", "isUnlocked": false },
+  { "id": "katakana-k-row", "moduleId": "kana-foundations", "title": "Katakana K-row", "description": "Learn カ, キ, ク, ケ, コ.", "orderIndex": 13, "lessonType": "kana", "isUnlocked": false },
+  { "id": "katakana-s-row", "moduleId": "kana-foundations", "title": "Katakana S-row", "description": "Learn サ, シ, ス, セ, ソ.", "orderIndex": 14, "lessonType": "kana", "isUnlocked": false },
+  { "id": "katakana-t-row", "moduleId": "kana-foundations", "title": "Katakana T-row", "description": "Learn タ, チ, ツ, テ, ト.", "orderIndex": 15, "lessonType": "kana", "isUnlocked": false },
+  { "id": "katakana-n-row", "moduleId": "kana-foundations", "title": "Katakana N-row", "description": "Learn ナ, ニ, ヌ, ネ, ノ.", "orderIndex": 16, "lessonType": "kana", "isUnlocked": false },
+  { "id": "katakana-h-row", "moduleId": "kana-foundations", "title": "Katakana H-row", "description": "Learn ハ, ヒ, フ, ヘ, ホ.", "orderIndex": 17, "lessonType": "kana", "isUnlocked": false },
+  { "id": "katakana-m-row", "moduleId": "kana-foundations", "title": "Katakana M-row", "description": "Learn マ, ミ, ム, メ, モ.", "orderIndex": 18, "lessonType": "kana", "isUnlocked": false },
+  { "id": "katakana-y-row", "moduleId": "kana-foundations", "title": "Katakana Y-row", "description": "Learn ヤ, ユ, ヨ.", "orderIndex": 19, "lessonType": "kana", "isUnlocked": false },
+  { "id": "katakana-r-row", "moduleId": "kana-foundations", "title": "Katakana R-row", "description": "Learn ラ, リ, ル, レ, ロ.", "orderIndex": 20, "lessonType": "kana", "isUnlocked": false },
+  { "id": "katakana-w-row", "moduleId": "kana-foundations", "title": "Katakana W-row", "description": "Learn ワ and ヲ.", "orderIndex": 21, "lessonType": "kana", "isUnlocked": false },
+  { "id": "katakana-n-final", "moduleId": "kana-foundations", "title": "Katakana ン", "description": "Learn the final nasal ン.", "orderIndex": 22, "lessonType": "kana", "isUnlocked": false },
+
+  { "id": "kana-dakuten", "moduleId": "kana-foundations", "title": "Dakuten", "description": "Learn voiced kana such as が, ざ, だ, and ば.", "orderIndex": 23, "lessonType": "kana", "isUnlocked": false },
+  { "id": "kana-handakuten", "moduleId": "kana-foundations", "title": "Handakuten", "description": "Learn the P-row kana ぱ, ぴ, ぷ, ぺ, ぽ and katakana equivalents.", "orderIndex": 24, "lessonType": "kana", "isUnlocked": false },
+  { "id": "kana-yoon", "moduleId": "kana-foundations", "title": "Yoon Combinations", "description": "Learn compact sounds such as きゃ, しゅ, ちょ, and katakana equivalents.", "orderIndex": 25, "lessonType": "kana", "isUnlocked": false },
+  { "id": "kana-small-tsu", "moduleId": "kana-foundations", "title": "Small Tsu", "description": "Learn っ and ッ for doubled consonants.", "orderIndex": 26, "lessonType": "kana", "isUnlocked": false },
+  { "id": "kana-long-vowels", "moduleId": "kana-foundations", "title": "Long Vowels", "description": "Learn long-vowel notation, including the katakana long sound mark.", "orderIndex": 27, "lessonType": "kana", "isUnlocked": false },
+  { "id": "kana-similar-looking", "moduleId": "kana-foundations", "title": "Similar-looking Kana", "description": "Practice pairs that are easy to confuse.", "orderIndex": 28, "lessonType": "kana", "isUnlocked": false },
+
+  { "id": "n5-self-introduction", "moduleId": "jlpt-n5", "title": "Self Introduction", "description": "Starter N5 words, grammar, and sentences for introducing yourself.", "orderIndex": 1, "lessonType": "mixed", "isUnlocked": false }
 ]

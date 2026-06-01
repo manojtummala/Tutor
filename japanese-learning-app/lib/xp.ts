@@ -5,6 +5,7 @@ const xpByPracticeType: Record<PracticeType, number> = {
   multiple_choice: 5,
   match_pairs: 6,
   type_answer: 8,
+  audio_recognition: 8,
   fill_blank: 8,
   sentence_reorder: 10,
 };

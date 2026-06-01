@@ -1,6 +1,2195 @@
 [
-  { "id": "hiragana_ga", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "kana-variations-intro", "japanese": "が", "reading": "ga", "romaji": "ga", "meaning": "dakuten variation of か", "metadata": { "script": "hiragana", "row": "g", "variationType": "dakuten" } },
-  { "id": "hiragana_pa", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "kana-variations-intro", "japanese": "ぱ", "reading": "pa", "romaji": "pa", "meaning": "handakuten variation of は", "metadata": { "script": "hiragana", "row": "p", "variationType": "handakuten" } },
-  { "id": "hiragana_kya", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "kana-variations-intro", "japanese": "きゃ", "reading": "kya", "romaji": "kya", "meaning": "yoon combination for kya", "metadata": { "script": "hiragana", "row": "yoon", "variationType": "combination" } },
-  { "id": "hiragana_small_tsu", "type": "kana", "level": "kana", "moduleId": "kana-foundations", "lessonId": "kana-variations-intro", "japanese": "っ", "reading": "small tsu", "romaji": "small tsu", "meaning": "marks a doubled consonant", "metadata": { "script": "hiragana", "row": "special", "variationType": "small-tsu" } }
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ga_304c",
+    "lessonId": "kana-dakuten",
+    "japanese": "が",
+    "reading": "ga",
+    "romaji": "ga",
+    "meaning": "hiragana kana for ga",
+    "audioSrc": "/audio/kana/ga.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "g",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_gi_304e",
+    "lessonId": "kana-dakuten",
+    "japanese": "ぎ",
+    "reading": "gi",
+    "romaji": "gi",
+    "meaning": "hiragana kana for gi",
+    "audioSrc": "/audio/kana/gi.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "g",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_gu_3050",
+    "lessonId": "kana-dakuten",
+    "japanese": "ぐ",
+    "reading": "gu",
+    "romaji": "gu",
+    "meaning": "hiragana kana for gu",
+    "audioSrc": "/audio/kana/gu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "g",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ge_3052",
+    "lessonId": "kana-dakuten",
+    "japanese": "げ",
+    "reading": "ge",
+    "romaji": "ge",
+    "meaning": "hiragana kana for ge",
+    "audioSrc": "/audio/kana/ge.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "g",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_go_3054",
+    "lessonId": "kana-dakuten",
+    "japanese": "ご",
+    "reading": "go",
+    "romaji": "go",
+    "meaning": "hiragana kana for go",
+    "audioSrc": "/audio/kana/go.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "g",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_za_3056",
+    "lessonId": "kana-dakuten",
+    "japanese": "ざ",
+    "reading": "za",
+    "romaji": "za",
+    "meaning": "hiragana kana for za",
+    "audioSrc": "/audio/kana/za.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "z",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ji_3058",
+    "lessonId": "kana-dakuten",
+    "japanese": "じ",
+    "reading": "ji",
+    "romaji": "ji",
+    "meaning": "hiragana kana for ji",
+    "audioSrc": "/audio/kana/ji.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "z",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_zu_305a",
+    "lessonId": "kana-dakuten",
+    "japanese": "ず",
+    "reading": "zu",
+    "romaji": "zu",
+    "meaning": "hiragana kana for zu",
+    "audioSrc": "/audio/kana/zu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "z",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ze_305c",
+    "lessonId": "kana-dakuten",
+    "japanese": "ぜ",
+    "reading": "ze",
+    "romaji": "ze",
+    "meaning": "hiragana kana for ze",
+    "audioSrc": "/audio/kana/ze.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "z",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_zo_305e",
+    "lessonId": "kana-dakuten",
+    "japanese": "ぞ",
+    "reading": "zo",
+    "romaji": "zo",
+    "meaning": "hiragana kana for zo",
+    "audioSrc": "/audio/kana/zo.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "z",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_da_3060",
+    "lessonId": "kana-dakuten",
+    "japanese": "だ",
+    "reading": "da",
+    "romaji": "da",
+    "meaning": "hiragana kana for da",
+    "audioSrc": "/audio/kana/da.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "d",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ji_3062",
+    "lessonId": "kana-dakuten",
+    "japanese": "ぢ",
+    "reading": "ji",
+    "romaji": "ji",
+    "meaning": "hiragana kana for ji",
+    "audioSrc": "/audio/kana/ji.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "d",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_zu_3065",
+    "lessonId": "kana-dakuten",
+    "japanese": "づ",
+    "reading": "zu",
+    "romaji": "zu",
+    "meaning": "hiragana kana for zu",
+    "audioSrc": "/audio/kana/zu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "d",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_de_3067",
+    "lessonId": "kana-dakuten",
+    "japanese": "で",
+    "reading": "de",
+    "romaji": "de",
+    "meaning": "hiragana kana for de",
+    "audioSrc": "/audio/kana/de.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "d",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_do_3069",
+    "lessonId": "kana-dakuten",
+    "japanese": "ど",
+    "reading": "do",
+    "romaji": "do",
+    "meaning": "hiragana kana for do",
+    "audioSrc": "/audio/kana/do.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "d",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ba_3070",
+    "lessonId": "kana-dakuten",
+    "japanese": "ば",
+    "reading": "ba",
+    "romaji": "ba",
+    "meaning": "hiragana kana for ba",
+    "audioSrc": "/audio/kana/ba.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "b",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_bi_3073",
+    "lessonId": "kana-dakuten",
+    "japanese": "び",
+    "reading": "bi",
+    "romaji": "bi",
+    "meaning": "hiragana kana for bi",
+    "audioSrc": "/audio/kana/bi.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "b",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_bu_3076",
+    "lessonId": "kana-dakuten",
+    "japanese": "ぶ",
+    "reading": "bu",
+    "romaji": "bu",
+    "meaning": "hiragana kana for bu",
+    "audioSrc": "/audio/kana/bu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "b",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_be_3079",
+    "lessonId": "kana-dakuten",
+    "japanese": "べ",
+    "reading": "be",
+    "romaji": "be",
+    "meaning": "hiragana kana for be",
+    "audioSrc": "/audio/kana/be.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "b",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_bo_307c",
+    "lessonId": "kana-dakuten",
+    "japanese": "ぼ",
+    "reading": "bo",
+    "romaji": "bo",
+    "meaning": "hiragana kana for bo",
+    "audioSrc": "/audio/kana/bo.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "b",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_ga_30ac",
+    "lessonId": "kana-dakuten",
+    "japanese": "ガ",
+    "reading": "ga",
+    "romaji": "ga",
+    "meaning": "katakana kana for ga",
+    "audioSrc": "/audio/kana/ga.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "g",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_gi_30ae",
+    "lessonId": "kana-dakuten",
+    "japanese": "ギ",
+    "reading": "gi",
+    "romaji": "gi",
+    "meaning": "katakana kana for gi",
+    "audioSrc": "/audio/kana/gi.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "g",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_gu_30b0",
+    "lessonId": "kana-dakuten",
+    "japanese": "グ",
+    "reading": "gu",
+    "romaji": "gu",
+    "meaning": "katakana kana for gu",
+    "audioSrc": "/audio/kana/gu.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "g",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_ge_30b2",
+    "lessonId": "kana-dakuten",
+    "japanese": "ゲ",
+    "reading": "ge",
+    "romaji": "ge",
+    "meaning": "katakana kana for ge",
+    "audioSrc": "/audio/kana/ge.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "g",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_go_30b4",
+    "lessonId": "kana-dakuten",
+    "japanese": "ゴ",
+    "reading": "go",
+    "romaji": "go",
+    "meaning": "katakana kana for go",
+    "audioSrc": "/audio/kana/go.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "g",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_za_30b6",
+    "lessonId": "kana-dakuten",
+    "japanese": "ザ",
+    "reading": "za",
+    "romaji": "za",
+    "meaning": "katakana kana for za",
+    "audioSrc": "/audio/kana/za.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "z",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_ji_30b8",
+    "lessonId": "kana-dakuten",
+    "japanese": "ジ",
+    "reading": "ji",
+    "romaji": "ji",
+    "meaning": "katakana kana for ji",
+    "audioSrc": "/audio/kana/ji.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "z",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_zu_30ba",
+    "lessonId": "kana-dakuten",
+    "japanese": "ズ",
+    "reading": "zu",
+    "romaji": "zu",
+    "meaning": "katakana kana for zu",
+    "audioSrc": "/audio/kana/zu.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "z",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_ze_30bc",
+    "lessonId": "kana-dakuten",
+    "japanese": "ゼ",
+    "reading": "ze",
+    "romaji": "ze",
+    "meaning": "katakana kana for ze",
+    "audioSrc": "/audio/kana/ze.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "z",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_zo_30be",
+    "lessonId": "kana-dakuten",
+    "japanese": "ゾ",
+    "reading": "zo",
+    "romaji": "zo",
+    "meaning": "katakana kana for zo",
+    "audioSrc": "/audio/kana/zo.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "z",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_da_30c0",
+    "lessonId": "kana-dakuten",
+    "japanese": "ダ",
+    "reading": "da",
+    "romaji": "da",
+    "meaning": "katakana kana for da",
+    "audioSrc": "/audio/kana/da.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "d",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_ji_30c2",
+    "lessonId": "kana-dakuten",
+    "japanese": "ヂ",
+    "reading": "ji",
+    "romaji": "ji",
+    "meaning": "katakana kana for ji",
+    "audioSrc": "/audio/kana/ji.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "d",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_zu_30c5",
+    "lessonId": "kana-dakuten",
+    "japanese": "ヅ",
+    "reading": "zu",
+    "romaji": "zu",
+    "meaning": "katakana kana for zu",
+    "audioSrc": "/audio/kana/zu.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "d",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_de_30c7",
+    "lessonId": "kana-dakuten",
+    "japanese": "デ",
+    "reading": "de",
+    "romaji": "de",
+    "meaning": "katakana kana for de",
+    "audioSrc": "/audio/kana/de.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "d",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_do_30c9",
+    "lessonId": "kana-dakuten",
+    "japanese": "ド",
+    "reading": "do",
+    "romaji": "do",
+    "meaning": "katakana kana for do",
+    "audioSrc": "/audio/kana/do.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "d",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_ba_30d0",
+    "lessonId": "kana-dakuten",
+    "japanese": "バ",
+    "reading": "ba",
+    "romaji": "ba",
+    "meaning": "katakana kana for ba",
+    "audioSrc": "/audio/kana/ba.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "b",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_bi_30d3",
+    "lessonId": "kana-dakuten",
+    "japanese": "ビ",
+    "reading": "bi",
+    "romaji": "bi",
+    "meaning": "katakana kana for bi",
+    "audioSrc": "/audio/kana/bi.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "b",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_bu_30d6",
+    "lessonId": "kana-dakuten",
+    "japanese": "ブ",
+    "reading": "bu",
+    "romaji": "bu",
+    "meaning": "katakana kana for bu",
+    "audioSrc": "/audio/kana/bu.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "b",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_be_30d9",
+    "lessonId": "kana-dakuten",
+    "japanese": "ベ",
+    "reading": "be",
+    "romaji": "be",
+    "meaning": "katakana kana for be",
+    "audioSrc": "/audio/kana/be.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "b",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_bo_30dc",
+    "lessonId": "kana-dakuten",
+    "japanese": "ボ",
+    "reading": "bo",
+    "romaji": "bo",
+    "meaning": "katakana kana for bo",
+    "audioSrc": "/audio/kana/bo.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "b",
+      "variationType": "dakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_pa_3071",
+    "lessonId": "kana-handakuten",
+    "japanese": "ぱ",
+    "reading": "pa",
+    "romaji": "pa",
+    "meaning": "hiragana kana for pa",
+    "audioSrc": "/audio/kana/pa.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "p",
+      "variationType": "handakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_pi_3074",
+    "lessonId": "kana-handakuten",
+    "japanese": "ぴ",
+    "reading": "pi",
+    "romaji": "pi",
+    "meaning": "hiragana kana for pi",
+    "audioSrc": "/audio/kana/pi.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "p",
+      "variationType": "handakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_pu_3077",
+    "lessonId": "kana-handakuten",
+    "japanese": "ぷ",
+    "reading": "pu",
+    "romaji": "pu",
+    "meaning": "hiragana kana for pu",
+    "audioSrc": "/audio/kana/pu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "p",
+      "variationType": "handakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_pe_307a",
+    "lessonId": "kana-handakuten",
+    "japanese": "ぺ",
+    "reading": "pe",
+    "romaji": "pe",
+    "meaning": "hiragana kana for pe",
+    "audioSrc": "/audio/kana/pe.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "p",
+      "variationType": "handakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_po_307d",
+    "lessonId": "kana-handakuten",
+    "japanese": "ぽ",
+    "reading": "po",
+    "romaji": "po",
+    "meaning": "hiragana kana for po",
+    "audioSrc": "/audio/kana/po.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "p",
+      "variationType": "handakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_pa_30d1",
+    "lessonId": "kana-handakuten",
+    "japanese": "パ",
+    "reading": "pa",
+    "romaji": "pa",
+    "meaning": "katakana kana for pa",
+    "audioSrc": "/audio/kana/pa.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "p",
+      "variationType": "handakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_pi_30d4",
+    "lessonId": "kana-handakuten",
+    "japanese": "ピ",
+    "reading": "pi",
+    "romaji": "pi",
+    "meaning": "katakana kana for pi",
+    "audioSrc": "/audio/kana/pi.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "p",
+      "variationType": "handakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_pu_30d7",
+    "lessonId": "kana-handakuten",
+    "japanese": "プ",
+    "reading": "pu",
+    "romaji": "pu",
+    "meaning": "katakana kana for pu",
+    "audioSrc": "/audio/kana/pu.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "p",
+      "variationType": "handakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_pe_30da",
+    "lessonId": "kana-handakuten",
+    "japanese": "ペ",
+    "reading": "pe",
+    "romaji": "pe",
+    "meaning": "katakana kana for pe",
+    "audioSrc": "/audio/kana/pe.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "p",
+      "variationType": "handakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_po_30dd",
+    "lessonId": "kana-handakuten",
+    "japanese": "ポ",
+    "reading": "po",
+    "romaji": "po",
+    "meaning": "katakana kana for po",
+    "audioSrc": "/audio/kana/po.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "p",
+      "variationType": "handakuten"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_kya_304d",
+    "lessonId": "kana-yoon",
+    "japanese": "きゃ",
+    "reading": "kya",
+    "romaji": "kya",
+    "meaning": "hiragana kana for kya",
+    "audioSrc": "/audio/kana/kya.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_kyu_304d",
+    "lessonId": "kana-yoon",
+    "japanese": "きゅ",
+    "reading": "kyu",
+    "romaji": "kyu",
+    "meaning": "hiragana kana for kyu",
+    "audioSrc": "/audio/kana/kyu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_kyo_304d",
+    "lessonId": "kana-yoon",
+    "japanese": "きょ",
+    "reading": "kyo",
+    "romaji": "kyo",
+    "meaning": "hiragana kana for kyo",
+    "audioSrc": "/audio/kana/kyo.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_gya_304e",
+    "lessonId": "kana-yoon",
+    "japanese": "ぎゃ",
+    "reading": "gya",
+    "romaji": "gya",
+    "meaning": "hiragana kana for gya",
+    "audioSrc": "/audio/kana/gya.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_gyu_304e",
+    "lessonId": "kana-yoon",
+    "japanese": "ぎゅ",
+    "reading": "gyu",
+    "romaji": "gyu",
+    "meaning": "hiragana kana for gyu",
+    "audioSrc": "/audio/kana/gyu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_gyo_304e",
+    "lessonId": "kana-yoon",
+    "japanese": "ぎょ",
+    "reading": "gyo",
+    "romaji": "gyo",
+    "meaning": "hiragana kana for gyo",
+    "audioSrc": "/audio/kana/gyo.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_sha_3057",
+    "lessonId": "kana-yoon",
+    "japanese": "しゃ",
+    "reading": "sha",
+    "romaji": "sha",
+    "meaning": "hiragana kana for sha",
+    "audioSrc": "/audio/kana/sha.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_shu_3057",
+    "lessonId": "kana-yoon",
+    "japanese": "しゅ",
+    "reading": "shu",
+    "romaji": "shu",
+    "meaning": "hiragana kana for shu",
+    "audioSrc": "/audio/kana/shu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_sho_3057",
+    "lessonId": "kana-yoon",
+    "japanese": "しょ",
+    "reading": "sho",
+    "romaji": "sho",
+    "meaning": "hiragana kana for sho",
+    "audioSrc": "/audio/kana/sho.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ja_3058",
+    "lessonId": "kana-yoon",
+    "japanese": "じゃ",
+    "reading": "ja",
+    "romaji": "ja",
+    "meaning": "hiragana kana for ja",
+    "audioSrc": "/audio/kana/ja.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ju_3058",
+    "lessonId": "kana-yoon",
+    "japanese": "じゅ",
+    "reading": "ju",
+    "romaji": "ju",
+    "meaning": "hiragana kana for ju",
+    "audioSrc": "/audio/kana/ju.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_jo_3058",
+    "lessonId": "kana-yoon",
+    "japanese": "じょ",
+    "reading": "jo",
+    "romaji": "jo",
+    "meaning": "hiragana kana for jo",
+    "audioSrc": "/audio/kana/jo.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_cha_3061",
+    "lessonId": "kana-yoon",
+    "japanese": "ちゃ",
+    "reading": "cha",
+    "romaji": "cha",
+    "meaning": "hiragana kana for cha",
+    "audioSrc": "/audio/kana/cha.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_chu_3061",
+    "lessonId": "kana-yoon",
+    "japanese": "ちゅ",
+    "reading": "chu",
+    "romaji": "chu",
+    "meaning": "hiragana kana for chu",
+    "audioSrc": "/audio/kana/chu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_cho_3061",
+    "lessonId": "kana-yoon",
+    "japanese": "ちょ",
+    "reading": "cho",
+    "romaji": "cho",
+    "meaning": "hiragana kana for cho",
+    "audioSrc": "/audio/kana/cho.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ja_3062",
+    "lessonId": "kana-yoon",
+    "japanese": "ぢゃ",
+    "reading": "ja",
+    "romaji": "ja",
+    "meaning": "hiragana kana for ja",
+    "audioSrc": "/audio/kana/ja.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ju_3062",
+    "lessonId": "kana-yoon",
+    "japanese": "ぢゅ",
+    "reading": "ju",
+    "romaji": "ju",
+    "meaning": "hiragana kana for ju",
+    "audioSrc": "/audio/kana/ju.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_jo_3062",
+    "lessonId": "kana-yoon",
+    "japanese": "ぢょ",
+    "reading": "jo",
+    "romaji": "jo",
+    "meaning": "hiragana kana for jo",
+    "audioSrc": "/audio/kana/jo.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_nya_306b",
+    "lessonId": "kana-yoon",
+    "japanese": "にゃ",
+    "reading": "nya",
+    "romaji": "nya",
+    "meaning": "hiragana kana for nya",
+    "audioSrc": "/audio/kana/nya.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_nyu_306b",
+    "lessonId": "kana-yoon",
+    "japanese": "にゅ",
+    "reading": "nyu",
+    "romaji": "nyu",
+    "meaning": "hiragana kana for nyu",
+    "audioSrc": "/audio/kana/nyu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_nyo_306b",
+    "lessonId": "kana-yoon",
+    "japanese": "にょ",
+    "reading": "nyo",
+    "romaji": "nyo",
+    "meaning": "hiragana kana for nyo",
+    "audioSrc": "/audio/kana/nyo.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_hya_3072",
+    "lessonId": "kana-yoon",
+    "japanese": "ひゃ",
+    "reading": "hya",
+    "romaji": "hya",
+    "meaning": "hiragana kana for hya",
+    "audioSrc": "/audio/kana/hya.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_hyu_3072",
+    "lessonId": "kana-yoon",
+    "japanese": "ひゅ",
+    "reading": "hyu",
+    "romaji": "hyu",
+    "meaning": "hiragana kana for hyu",
+    "audioSrc": "/audio/kana/hyu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_hyo_3072",
+    "lessonId": "kana-yoon",
+    "japanese": "ひょ",
+    "reading": "hyo",
+    "romaji": "hyo",
+    "meaning": "hiragana kana for hyo",
+    "audioSrc": "/audio/kana/hyo.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_bya_3073",
+    "lessonId": "kana-yoon",
+    "japanese": "びゃ",
+    "reading": "bya",
+    "romaji": "bya",
+    "meaning": "hiragana kana for bya",
+    "audioSrc": "/audio/kana/bya.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_byu_3073",
+    "lessonId": "kana-yoon",
+    "japanese": "びゅ",
+    "reading": "byu",
+    "romaji": "byu",
+    "meaning": "hiragana kana for byu",
+    "audioSrc": "/audio/kana/byu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_byo_3073",
+    "lessonId": "kana-yoon",
+    "japanese": "びょ",
+    "reading": "byo",
+    "romaji": "byo",
+    "meaning": "hiragana kana for byo",
+    "audioSrc": "/audio/kana/byo.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_pya_3074",
+    "lessonId": "kana-yoon",
+    "japanese": "ぴゃ",
+    "reading": "pya",
+    "romaji": "pya",
+    "meaning": "hiragana kana for pya",
+    "audioSrc": "/audio/kana/pya.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_pyu_3074",
+    "lessonId": "kana-yoon",
+    "japanese": "ぴゅ",
+    "reading": "pyu",
+    "romaji": "pyu",
+    "meaning": "hiragana kana for pyu",
+    "audioSrc": "/audio/kana/pyu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_pyo_3074",
+    "lessonId": "kana-yoon",
+    "japanese": "ぴょ",
+    "reading": "pyo",
+    "romaji": "pyo",
+    "meaning": "hiragana kana for pyo",
+    "audioSrc": "/audio/kana/pyo.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_mya_307f",
+    "lessonId": "kana-yoon",
+    "japanese": "みゃ",
+    "reading": "mya",
+    "romaji": "mya",
+    "meaning": "hiragana kana for mya",
+    "audioSrc": "/audio/kana/mya.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_myu_307f",
+    "lessonId": "kana-yoon",
+    "japanese": "みゅ",
+    "reading": "myu",
+    "romaji": "myu",
+    "meaning": "hiragana kana for myu",
+    "audioSrc": "/audio/kana/myu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_myo_307f",
+    "lessonId": "kana-yoon",
+    "japanese": "みょ",
+    "reading": "myo",
+    "romaji": "myo",
+    "meaning": "hiragana kana for myo",
+    "audioSrc": "/audio/kana/myo.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_rya_308a",
+    "lessonId": "kana-yoon",
+    "japanese": "りゃ",
+    "reading": "rya",
+    "romaji": "rya",
+    "meaning": "hiragana kana for rya",
+    "audioSrc": "/audio/kana/rya.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ryu_308a",
+    "lessonId": "kana-yoon",
+    "japanese": "りゅ",
+    "reading": "ryu",
+    "romaji": "ryu",
+    "meaning": "hiragana kana for ryu",
+    "audioSrc": "/audio/kana/ryu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_ryo_308a",
+    "lessonId": "kana-yoon",
+    "japanese": "りょ",
+    "reading": "ryo",
+    "romaji": "ryo",
+    "meaning": "hiragana kana for ryo",
+    "audioSrc": "/audio/kana/ryo.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_kya_30ad",
+    "lessonId": "kana-yoon",
+    "japanese": "キャ",
+    "reading": "kya",
+    "romaji": "kya",
+    "meaning": "katakana kana for kya",
+    "audioSrc": "/audio/kana/kya.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_kyu_30ad",
+    "lessonId": "kana-yoon",
+    "japanese": "キュ",
+    "reading": "kyu",
+    "romaji": "kyu",
+    "meaning": "katakana kana for kyu",
+    "audioSrc": "/audio/kana/kyu.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_kyo_30ad",
+    "lessonId": "kana-yoon",
+    "japanese": "キョ",
+    "reading": "kyo",
+    "romaji": "kyo",
+    "meaning": "katakana kana for kyo",
+    "audioSrc": "/audio/kana/kyo.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_gya_30ae",
+    "lessonId": "kana-yoon",
+    "japanese": "ギャ",
+    "reading": "gya",
+    "romaji": "gya",
+    "meaning": "katakana kana for gya",
+    "audioSrc": "/audio/kana/gya.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_gyu_30ae",
+    "lessonId": "kana-yoon",
+    "japanese": "ギュ",
+    "reading": "gyu",
+    "romaji": "gyu",
+    "meaning": "katakana kana for gyu",
+    "audioSrc": "/audio/kana/gyu.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_gyo_30ae",
+    "lessonId": "kana-yoon",
+    "japanese": "ギョ",
+    "reading": "gyo",
+    "romaji": "gyo",
+    "meaning": "katakana kana for gyo",
+    "audioSrc": "/audio/kana/gyo.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_sha_30b7",
+    "lessonId": "kana-yoon",
+    "japanese": "シャ",
+    "reading": "sha",
+    "romaji": "sha",
+    "meaning": "katakana kana for sha",
+    "audioSrc": "/audio/kana/sha.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_shu_30b7",
+    "lessonId": "kana-yoon",
+    "japanese": "シュ",
+    "reading": "shu",
+    "romaji": "shu",
+    "meaning": "katakana kana for shu",
+    "audioSrc": "/audio/kana/shu.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_sho_30b7",
+    "lessonId": "kana-yoon",
+    "japanese": "ショ",
+    "reading": "sho",
+    "romaji": "sho",
+    "meaning": "katakana kana for sho",
+    "audioSrc": "/audio/kana/sho.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_ja_30b8",
+    "lessonId": "kana-yoon",
+    "japanese": "ジャ",
+    "reading": "ja",
+    "romaji": "ja",
+    "meaning": "katakana kana for ja",
+    "audioSrc": "/audio/kana/ja.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_ju_30b8",
+    "lessonId": "kana-yoon",
+    "japanese": "ジュ",
+    "reading": "ju",
+    "romaji": "ju",
+    "meaning": "katakana kana for ju",
+    "audioSrc": "/audio/kana/ju.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_jo_30b8",
+    "lessonId": "kana-yoon",
+    "japanese": "ジョ",
+    "reading": "jo",
+    "romaji": "jo",
+    "meaning": "katakana kana for jo",
+    "audioSrc": "/audio/kana/jo.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_cha_30c1",
+    "lessonId": "kana-yoon",
+    "japanese": "チャ",
+    "reading": "cha",
+    "romaji": "cha",
+    "meaning": "katakana kana for cha",
+    "audioSrc": "/audio/kana/cha.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_chu_30c1",
+    "lessonId": "kana-yoon",
+    "japanese": "チュ",
+    "reading": "chu",
+    "romaji": "chu",
+    "meaning": "katakana kana for chu",
+    "audioSrc": "/audio/kana/chu.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_cho_30c1",
+    "lessonId": "kana-yoon",
+    "japanese": "チョ",
+    "reading": "cho",
+    "romaji": "cho",
+    "meaning": "katakana kana for cho",
+    "audioSrc": "/audio/kana/cho.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_ja_30c2",
+    "lessonId": "kana-yoon",
+    "japanese": "ヂャ",
+    "reading": "ja",
+    "romaji": "ja",
+    "meaning": "katakana kana for ja",
+    "audioSrc": "/audio/kana/ja.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_ju_30c2",
+    "lessonId": "kana-yoon",
+    "japanese": "ヂュ",
+    "reading": "ju",
+    "romaji": "ju",
+    "meaning": "katakana kana for ju",
+    "audioSrc": "/audio/kana/ju.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_jo_30c2",
+    "lessonId": "kana-yoon",
+    "japanese": "ヂョ",
+    "reading": "jo",
+    "romaji": "jo",
+    "meaning": "katakana kana for jo",
+    "audioSrc": "/audio/kana/jo.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_nya_30cb",
+    "lessonId": "kana-yoon",
+    "japanese": "ニャ",
+    "reading": "nya",
+    "romaji": "nya",
+    "meaning": "katakana kana for nya",
+    "audioSrc": "/audio/kana/nya.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_nyu_30cb",
+    "lessonId": "kana-yoon",
+    "japanese": "ニュ",
+    "reading": "nyu",
+    "romaji": "nyu",
+    "meaning": "katakana kana for nyu",
+    "audioSrc": "/audio/kana/nyu.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_nyo_30cb",
+    "lessonId": "kana-yoon",
+    "japanese": "ニョ",
+    "reading": "nyo",
+    "romaji": "nyo",
+    "meaning": "katakana kana for nyo",
+    "audioSrc": "/audio/kana/nyo.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_hya_30d2",
+    "lessonId": "kana-yoon",
+    "japanese": "ヒャ",
+    "reading": "hya",
+    "romaji": "hya",
+    "meaning": "katakana kana for hya",
+    "audioSrc": "/audio/kana/hya.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_hyu_30d2",
+    "lessonId": "kana-yoon",
+    "japanese": "ヒュ",
+    "reading": "hyu",
+    "romaji": "hyu",
+    "meaning": "katakana kana for hyu",
+    "audioSrc": "/audio/kana/hyu.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_hyo_30d2",
+    "lessonId": "kana-yoon",
+    "japanese": "ヒョ",
+    "reading": "hyo",
+    "romaji": "hyo",
+    "meaning": "katakana kana for hyo",
+    "audioSrc": "/audio/kana/hyo.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_bya_30d3",
+    "lessonId": "kana-yoon",
+    "japanese": "ビャ",
+    "reading": "bya",
+    "romaji": "bya",
+    "meaning": "katakana kana for bya",
+    "audioSrc": "/audio/kana/bya.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_byu_30d3",
+    "lessonId": "kana-yoon",
+    "japanese": "ビュ",
+    "reading": "byu",
+    "romaji": "byu",
+    "meaning": "katakana kana for byu",
+    "audioSrc": "/audio/kana/byu.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_byo_30d3",
+    "lessonId": "kana-yoon",
+    "japanese": "ビョ",
+    "reading": "byo",
+    "romaji": "byo",
+    "meaning": "katakana kana for byo",
+    "audioSrc": "/audio/kana/byo.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_pya_30d4",
+    "lessonId": "kana-yoon",
+    "japanese": "ピャ",
+    "reading": "pya",
+    "romaji": "pya",
+    "meaning": "katakana kana for pya",
+    "audioSrc": "/audio/kana/pya.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_pyu_30d4",
+    "lessonId": "kana-yoon",
+    "japanese": "ピュ",
+    "reading": "pyu",
+    "romaji": "pyu",
+    "meaning": "katakana kana for pyu",
+    "audioSrc": "/audio/kana/pyu.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_pyo_30d4",
+    "lessonId": "kana-yoon",
+    "japanese": "ピョ",
+    "reading": "pyo",
+    "romaji": "pyo",
+    "meaning": "katakana kana for pyo",
+    "audioSrc": "/audio/kana/pyo.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_mya_30df",
+    "lessonId": "kana-yoon",
+    "japanese": "ミャ",
+    "reading": "mya",
+    "romaji": "mya",
+    "meaning": "katakana kana for mya",
+    "audioSrc": "/audio/kana/mya.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_myu_30df",
+    "lessonId": "kana-yoon",
+    "japanese": "ミュ",
+    "reading": "myu",
+    "romaji": "myu",
+    "meaning": "katakana kana for myu",
+    "audioSrc": "/audio/kana/myu.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_myo_30df",
+    "lessonId": "kana-yoon",
+    "japanese": "ミョ",
+    "reading": "myo",
+    "romaji": "myo",
+    "meaning": "katakana kana for myo",
+    "audioSrc": "/audio/kana/myo.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_rya_30ea",
+    "lessonId": "kana-yoon",
+    "japanese": "リャ",
+    "reading": "rya",
+    "romaji": "rya",
+    "meaning": "katakana kana for rya",
+    "audioSrc": "/audio/kana/rya.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_ryu_30ea",
+    "lessonId": "kana-yoon",
+    "japanese": "リュ",
+    "reading": "ryu",
+    "romaji": "ryu",
+    "meaning": "katakana kana for ryu",
+    "audioSrc": "/audio/kana/ryu.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_ryo_30ea",
+    "lessonId": "kana-yoon",
+    "japanese": "リョ",
+    "reading": "ryo",
+    "romaji": "ryo",
+    "meaning": "katakana kana for ryo",
+    "audioSrc": "/audio/kana/ryo.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "yoon",
+      "variationType": "combination"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_small_tsu_3063",
+    "lessonId": "kana-small-tsu",
+    "japanese": "っ",
+    "reading": "small-tsu",
+    "romaji": "small-tsu",
+    "meaning": "hiragana kana for small-tsu",
+    "audioSrc": "/audio/kana/small-tsu.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "special",
+      "variationType": "small-tsu"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_small_tsu_30c3",
+    "lessonId": "kana-small-tsu",
+    "japanese": "ッ",
+    "reading": "small-tsu",
+    "romaji": "small-tsu",
+    "meaning": "katakana kana for small-tsu",
+    "audioSrc": "/audio/kana/small-tsu.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "special",
+      "variationType": "small-tsu"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_long_vowel_30fc",
+    "lessonId": "kana-long-vowels",
+    "japanese": "ー",
+    "reading": "long-vowel",
+    "romaji": "long-vowel",
+    "meaning": "katakana kana for long-vowel",
+    "audioSrc": "/audio/kana/long-vowel.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "special",
+      "variationType": "long-vowel"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_a_o_3042",
+    "lessonId": "kana-similar-looking",
+    "japanese": "あ/お",
+    "reading": "a-o",
+    "romaji": "a-o",
+    "meaning": "hiragana kana for a-o",
+    "audioSrc": "/audio/kana/a-o.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "drill",
+      "variationType": "similar-looking"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "hiragana_nu_me_306c",
+    "lessonId": "kana-similar-looking",
+    "japanese": "ぬ/め",
+    "reading": "nu-me",
+    "romaji": "nu-me",
+    "meaning": "hiragana kana for nu-me",
+    "audioSrc": "/audio/kana/nu-me.mp3",
+    "metadata": {
+      "script": "hiragana",
+      "row": "drill",
+      "variationType": "similar-looking"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_shi_tsu_30b7",
+    "lessonId": "kana-similar-looking",
+    "japanese": "シ/ツ",
+    "reading": "shi-tsu",
+    "romaji": "shi-tsu",
+    "meaning": "katakana kana for shi-tsu",
+    "audioSrc": "/audio/kana/shi-tsu.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "drill",
+      "variationType": "similar-looking"
+    }
+  },
+  {
+    "type": "kana",
+    "level": "kana",
+    "moduleId": "kana-foundations",
+    "id": "katakana_so_n_30bd",
+    "lessonId": "kana-similar-looking",
+    "japanese": "ソ/ン",
+    "reading": "so-n",
+    "romaji": "so-n",
+    "meaning": "katakana kana for so-n",
+    "audioSrc": "/audio/kana/so-n.mp3",
+    "metadata": {
+      "script": "katakana",
+      "row": "drill",
+      "variationType": "similar-looking"
+    }
+  }
 ]

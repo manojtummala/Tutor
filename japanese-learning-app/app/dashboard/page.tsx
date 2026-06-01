@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, BookOpen, Brain, Flame, Goal, RotateCcw, Star, Trophy } from "lucide-react";
 import { AppShell } from "@/components/layout/app-shell";
 import { StatCard } from "@/components/dashboard/stat-card";
+import { KanaCard } from "@/components/lesson/kana-card";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -50,9 +51,7 @@ export default function DashboardPage() {
             <CardContent className="space-y-5">
               <div className="grid grid-cols-5 gap-2 sm:max-w-md">
                 {snapshot.nextLesson.items.slice(0, 5).map((item) => (
-                  <div key={item.id} className="kana-tile">
-                    {item.japanese}
-                  </div>
+                  <KanaCard key={item.id} item={item} className="p-2" />
                 ))}
               </div>
               <div>
