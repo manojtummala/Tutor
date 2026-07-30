@@ -1,31 +1,40 @@
+import Database from "better-sqlite3";
 import { AppShell } from "@/components/layout/app-shell";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-import { learningItems } from "@/lib/content/data";
+import { N5LearnClient } from "@/components/learn/n5-learn-client";
+import { getLessonsForModule } from "@/lib/content/data";
+import type { LessonWithItems } from "@/lib/content/types";
 
 export default function N5Page() {
-  const n5Items = learningItems.filter((item) => item.level === "N5");
+  const sqlite = new Database("local.db", { readonly: true });
+  let lessons: LessonWithItems[];
+
+  try {
+    lessons = getLessonsForModule("jlpt-n5");
+
+    const progressRows = sqlite.prepare(`
+      SELECT item_id, status FROM user_item_progress
+    `).all() as Array<{ item_id: string; status: string }>;
+
+    const progressMap = new Map(progressRows.map((r) => [r.item_id, r.status]));
+
+    lessons = lessons.map((lesson) => {
+      const progressedItems = lesson.items.filter((item) => {
+        const status = progressMap.get(item.id);
+        return status && status !== "new";
+      });
+      const completion = lesson.items.length > 0
+        ? Math.round((progressedItems.length / lesson.items.length) * 100)
+        : 0;
+
+      return { ...lesson, completion };
+    });
+  } finally {
+    sqlite.close();
+  }
 
   return (
     <AppShell>
-      <div className="space-y-6">
-        <div>
-          <Badge className="mb-3 rounded-md" variant="secondary">Preview</Badge>
-          <h1 className="text-3xl font-semibold">JLPT N5</h1>
-          <p className="mt-2 max-w-2xl text-muted-foreground">Starter vocabulary, kanji, grammar, and sentence content is seeded for the next module.</p>
-        </div>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {n5Items.map((item) => (
-            <Card key={item.id} className="rounded-md bg-white/90">
-              <CardContent className="p-4">
-                <p className="text-xs font-medium uppercase text-muted-foreground">{item.type}</p>
-                <p className="mt-2 text-2xl font-semibold">{item.japanese}</p>
-                <p className="text-sm text-muted-foreground">{item.meaning}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
+      <N5LearnClient lessons={lessons} />
     </AppShell>
   );
 }

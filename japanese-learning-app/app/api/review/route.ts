@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import Database from "better-sqlite3";
 import { learningItems } from "@/lib/content/data";
+import { ensureGeneratedQuestionTables, getLearnedKanji, getReadyGeneratedQuestions } from "@/lib/server/generated-question-store";
 import type { KanaProgressStatus } from "@/lib/content/types";
 
 export const runtime = "nodejs";
@@ -20,6 +21,7 @@ export async function GET() {
   const sqlite = openDb();
 
   try {
+    ensureGeneratedQuestionTables(sqlite);
     const rows = sqlite.prepare(`
       SELECT item_id, status, correct_attempt_count, target_correct_attempts
       FROM user_item_progress
@@ -44,7 +46,10 @@ export async function GET() {
         targetCorrectAttempts: progressByItemId.get(item.id)?.target_correct_attempts ?? 5,
       }));
 
-    return NextResponse.json({ items: dueItems });
+    const learnedKanji = getLearnedKanji(sqlite);
+    const generatedQuestions = getReadyGeneratedQuestions(sqlite, rows.map((row) => row.item_id), learnedKanji);
+
+    return NextResponse.json({ items: dueItems, generatedQuestions });
   } finally {
     sqlite.close();
   }

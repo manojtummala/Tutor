@@ -74,6 +74,40 @@ export const practiceAttempts = sqliteTable("practice_attempts", {
   createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
 });
 
+export const generatedPracticeQuestions = sqliteTable("generated_practice_questions", {
+  id: text("id").primaryKey(),
+  chunkKey: text("chunk_key").notNull(),
+  type: text("type", { enum: ["multiple_choice", "fill_blank", "sentence_reorder", "match_pairs"] }).notNull(),
+  level: text("level").notNull(),
+  prompt: text("prompt").notNull(),
+  choicesJson: text("choices_json"),
+  blocksJson: text("blocks_json"),
+  correctAnswerJson: text("correct_answer_json").notNull(),
+  naturalSentence: text("natural_sentence"),
+  explanation: text("explanation").notNull(),
+  sourceItemIdsJson: text("source_item_ids_json").notNull(),
+  scriptMode: text("script_mode", { enum: ["kana_only", "learned_kanji_only"] }).notNull(),
+  kanjiUsedJson: text("kanji_used_json").notNull(),
+  status: text("status", { enum: ["active", "rejected", "archived"] }).notNull().default("active"),
+  model: text("model").notNull(),
+  timesShown: integer("times_shown").notNull().default(0),
+  timesCorrect: integer("times_correct").notNull().default(0),
+  createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+  updatedAt: text("updated_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+});
+
+export const questionGenerationJobs = sqliteTable("question_generation_jobs", {
+  id: text("id").primaryKey(),
+  chunkKey: text("chunk_key").notNull(),
+  sourceItemIdsJson: text("source_item_ids_json").notNull(),
+  status: text("status", { enum: ["pending", "running", "completed", "failed"] }).notNull().default("pending"),
+  model: text("model"),
+  attemptCount: integer("attempt_count").notNull().default(0),
+  error: text("error"),
+  createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+  updatedAt: text("updated_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+});
+
 export const dailyStats = sqliteTable("daily_stats", {
   date: text("date").primaryKey(),
   xp: integer("xp").notNull().default(0),

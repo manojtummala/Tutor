@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export function KanaCard({ item, className, showStatus = false }: { item: LearningItem & { status?: ItemStatus }; className?: string; showStatus?: boolean }) {
   return (
-    <div className={cn("relative rounded-md border bg-white p-3 shadow-sm", className)}>
+    <div className={cn("relative rounded-xl border bg-white p-3 shadow-sm transition hover:shadow-md", className)}>
       <div className="absolute right-2 top-2">
         <SpeakerButton audioSrc={item.audioSrc} text={item.japanese} className="size-7" />
       </div>

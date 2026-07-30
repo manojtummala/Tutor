@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import Database from "better-sqlite3";
 import { learningItems } from "@/lib/content/data";
+import { queueQuestionGenerationIfNeeded } from "@/lib/server/question-generation";
 import type { KanaProgressStatus, PracticeType } from "@/lib/content/types";
 
 export const runtime = "nodejs";
@@ -49,7 +50,8 @@ export async function POST(request: Request) {
         ids.forEach((id) => update.run(now, targetCorrectAttempts, id));
       })();
 
-      return NextResponse.json({ introduced: ids.length });
+      const generation = queueQuestionGenerationIfNeeded(ids);
+      return NextResponse.json({ introduced: ids.length, generation });
     }
 
     if (body.action === "practice") {

@@ -1,12 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { CheckCircle2, PlayCircle, Sparkles, X } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { CheckCircle2, Lock, PlayCircle, Sparkles, X } from "lucide-react";
 import { KanaLearnSpotlight } from "@/components/learn/kana-learn-spotlight";
-import { KanaPracticeSession } from "@/components/practice/kana-practice-session";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { LearningItem, LessonWithItems } from "@/lib/content/types";
 
@@ -23,29 +24,43 @@ function LessonCard({
   onToggle: () => void;
   onStart: () => void;
 }) {
+  const locked = !lesson.isUnlocked;
+  const complete = lesson.completion >= 100;
+  const Icon = locked ? Lock : complete ? CheckCircle2 : PlayCircle;
+
   return (
     <Card
-      className={`rounded-md bg-white/90 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md ${selected ? "border-primary ring-2 ring-primary/25" : ""} ${selectionMode ? "cursor-pointer" : ""}`}
+      className={`rounded-2xl border-0 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md ${selected ? "ring-2 ring-primary/30" : ""} ${selectionMode ? "cursor-pointer" : ""}`}
       onClick={selectionMode ? onToggle : undefined}
     >
-      <CardContent className="grid gap-4 p-4 sm:grid-cols-[1fr_auto] sm:items-center">
-        <div>
-          <div className="mb-2 flex flex-wrap items-center gap-2">
+      <CardContent className="grid gap-4 p-4 sm:grid-cols-[44px_1fr_auto] sm:items-center">
+        <span className="flex size-11 items-center justify-center rounded-md bg-muted text-muted-foreground">
+          <Icon className="size-5" />
+        </span>
+        <div className="min-w-0">
+          <div className="mb-1 flex flex-wrap items-center gap-2">
             <h3 className="font-semibold">{lesson.title}</h3>
-            <Badge variant={lesson.isUnlocked ? "secondary" : "outline"}>{lesson.items.length} kana</Badge>
+            <Badge variant={locked ? "outline" : "secondary"}>{lesson.items.length} kana</Badge>
+            {locked && <Badge variant="outline">Locked</Badge>}
             {selected ? <Badge><CheckCircle2 className="size-3" /> Selected</Badge> : null}
           </div>
           <p className="text-sm text-muted-foreground">{lesson.description}</p>
+          <div className="mt-2 flex items-center gap-3">
+            <Progress value={lesson.completion} className="h-2 max-w-32" />
+            <span className="text-xs text-muted-foreground">{lesson.completion}%</span>
+          </div>
         </div>
         <div className="flex flex-wrap gap-2 sm:justify-end">
           <Button
+            size="sm"
+            disabled={locked}
             onClick={(event) => {
               event.stopPropagation();
               onStart();
             }}
           >
             <PlayCircle className="size-4" />
-            Start
+            {complete ? "Review" : "Start"}
           </Button>
         </div>
       </CardContent>
@@ -54,9 +69,9 @@ function LessonCard({
 }
 
 export function KanaLearnClient({ hiraganaLessons, katakanaLessons, specialLessons }: { hiraganaLessons: LessonWithItems[]; katakanaLessons: LessonWithItems[]; specialLessons: LessonWithItems[] }) {
+  const router = useRouter();
   const [selectedLessonIds, setSelectedLessonIds] = useState<string[]>([]);
   const [selectionMode, setSelectionMode] = useState(false);
-  const [practiceStarted, setPracticeStarted] = useState(false);
   const [spotlight, setSpotlight] = useState<{ title: string; items: LearningItem[] } | null>(null);
 
   const allLessons = useMemo(() => [...hiraganaLessons, ...katakanaLessons, ...specialLessons], [hiraganaLessons, katakanaLessons, specialLessons]);
@@ -71,22 +86,20 @@ export function KanaLearnClient({ hiraganaLessons, katakanaLessons, specialLesso
     }
 
     setSelectedLessonIds((current) => current.includes(lessonId) ? current.filter((id) => id !== lessonId) : [...current, lessonId]);
-    setPracticeStarted(false);
   }
 
   function cancelPracticeSelection() {
     setSelectedLessonIds([]);
     setSelectionMode(false);
-    setPracticeStarted(false);
   }
 
   function startPractice() {
-    if (selectedLessonIds.length === 0) {
+    if (selectedItems.length === 0) {
       return;
     }
 
-    setSelectionMode(false);
-    setPracticeStarted(true);
+    const params = new URLSearchParams({ lessonIds: selectedLessonIds.join(",") });
+    router.push(`/practice?${params.toString()}`);
   }
 
   function renderLessons(lessons: LessonWithItems[]) {
@@ -136,10 +149,7 @@ export function KanaLearnClient({ hiraganaLessons, katakanaLessons, specialLesso
               ) : (
                 <>
                   <p className="text-sm text-muted-foreground">Choose rows from the current page, then start a scored romaji practice session.</p>
-                  <Button onClick={() => {
-                    setSelectionMode(true);
-                    setPracticeStarted(false);
-                  }}>
+                  <Button onClick={() => setSelectionMode(true)}>
                     Select rows to practice
                   </Button>
                 </>
@@ -170,8 +180,6 @@ export function KanaLearnClient({ hiraganaLessons, katakanaLessons, specialLesso
           </div>
           {renderLessons(specialLessons)}
         </section>
-
-        {practiceStarted ? <KanaPracticeSession key={selectedLessonIds.join(",")} items={selectedItems} /> : null}
       </div>
 
       <KanaLearnSpotlight

@@ -14,26 +14,26 @@ export function LessonPath({ lessons }: { lessons: LessonWithItems[] }) {
         const Icon = locked ? Lock : complete ? CheckCircle2 : PlayCircle;
 
         return (
-          <Card key={lesson.id} className="rounded-md bg-white/90">
+          <Card key={lesson.id} className="rounded-xl border-0 bg-white shadow-sm">
             <CardContent className="grid gap-4 p-4 sm:grid-cols-[44px_1fr_auto] sm:items-center">
-              <span className="flex size-11 items-center justify-center rounded-md bg-muted text-muted-foreground">
+              <span className="flex size-11 items-center justify-center rounded-xl bg-muted text-muted-foreground">
                 <Icon className="size-5" />
               </span>
               <div className="min-w-0 space-y-2">
                 <div className="flex flex-wrap items-center gap-2">
                   <p className="font-semibold">{lesson.title}</p>
-                  <Badge variant={locked ? "secondary" : "default"}>{locked ? "Locked" : `Lesson ${index + 1}`}</Badge>
+                  <Badge variant={locked ? "secondary" : "default"} className="rounded-full">{locked ? "Locked" : `Lesson ${index + 1}`}</Badge>
                 </div>
                 <p className="text-sm text-muted-foreground">{lesson.description}</p>
                 <div className="flex items-center gap-3">
-                  <Progress value={lesson.completion} className="h-2 max-w-sm" />
+                  <Progress value={lesson.completion} className="h-2 max-w-sm rounded-full bg-muted" />
                   <span className="w-10 text-right text-xs text-muted-foreground">{lesson.completion}%</span>
                 </div>
               </div>
               {locked ? (
                 <span className="text-sm text-muted-foreground">Complete earlier lessons</span>
               ) : (
-                <Link className="rounded-md bg-primary px-4 py-2 text-center text-sm font-medium text-primary-foreground transition hover:opacity-90" href={`/lesson/${lesson.id}`}>
+                <Link className="rounded-xl bg-primary px-4 py-2 text-center text-sm font-medium text-primary-foreground transition hover:opacity-90" href={`/lesson/${lesson.id}`}>
                   Start
                 </Link>
               )}

@@ -44,28 +44,19 @@ The home page redirects to:
 http://localhost:3000/dashboard
 ```
 
-## Local Agent Practice
+## Background Question Generation
 
-Agent Practice uses LM Studio through its local OpenAI-compatible API.
+Practice starts immediately from static kana questions and valid generated questions already stored in SQLite. Gemini generation runs separately after practice-queue coverage becomes low.
 
-Create `.env.local` from `.env.example` and adjust the model if needed:
+Create `.env.local` from `.env.example`:
 
 ```env
-AI_PROVIDER=lmstudio
-LM_STUDIO_BASE_URL=http://127.0.0.1:1234
-LM_STUDIO_MODEL=qwen2.5-7b-instruct-mlx
-LM_STUDIO_API_KEY=lm-studio
-AI_REQUEST_TIMEOUT_MS=120000
-AI_MAX_OUTPUT_TOKENS=1400
+GEMINI_API_KEY=your-gemini-api-key
+GEMINI_SIMPLE_MODEL=gemini-2.5-flash-lite
+GEMINI_STRONG_MODEL=gemini-2.5-flash
 ```
 
-Then open:
-
-```text
-http://localhost:3000/practice/agent
-```
-
-LM Studio must be running locally. Agent Practice v1 targets 6 final questions from up to 8 candidates while the local generation pipeline stabilizes. For UI development without LM Studio, set `AGENT_PRACTICE_MOCK=true`.
+Gemini uses structured JSON output. Finishing a Kana Learn row checks/generates coverage once for that row chunk; individual kana practice answers do not call Gemini. Valid questions are stored in `generated_practice_questions`, and recent or in-progress row jobs are deduplicated in `question_generation_jobs`. Without a Gemini key, existing static practice still works.
 
 ## Check Progress So Far
 
@@ -94,15 +85,14 @@ Expected result: each route should return `HTTP/1.1 200 OK`.
 - `/learn/kana/hiragana` - hiragana browser
 - `/learn/kana/katakana` - katakana browser
 - `/learn/kana/variations` - kana variations browser
-- `/learn/n5` - JLPT N5 starter shell
+- `/learn/n5` - JLPT N5 module with lesson cards and card-sequence intro
 - `/lesson/hiragana-vowels` - sample lesson page
-- `/practice` - practice hub shell
-- `/practice/kana` - static/manual kana practice
-- `/practice/agent` - LM Studio generated N5 practice
-- `/review` - review/SRS shell
-- `/library` - browse seeded learning items
-- `/progress` - progress dashboard shell
-- `/settings` - local app settings shell
+- `/practice` - unified static and stored-generated practice session
+- `/practice/kana` - redirects to unified practice for compatibility
+- `/review` - redirects to dashboard (deferred)
+- `/library` - browse seeded learning items with search and filters
+- `/progress` - progress analytics with real DB stats
+- `/settings` - daily goal, theme toggle, reset progress
 
 ## Database Commands
 
@@ -153,11 +143,11 @@ Done:
 - Library separated into Hiragana, Katakana, Kana Variations, Kanji, and N5 Starter Materials
 - `/library/kana` split into Hiragana and Katakana tabs with separate variation sections
 - `/review` now uses non-rated flip cards for introduced/practicing kana
-- `/practice` and `/learn/kana` selected-row practice now use mixed scored sessions
-- Mixed practice includes multiple choice, matching, typing, audio recognition, and reorder prompts
+- `/learn/kana` selected-row practice routes into `/practice`
+- Mixed kana practice includes multiple choice, matching, typing, and audio recognition prompts
 - Fill-blank sentence practice is deferred until sentence content is authored/generated properly
-- Practice hub split into Kana Practice and Agent Practice
-- Agent Practice setup added with LM Studio generation, validation, and friendly error handling
+- Unified Practice reads ready generated questions from SQLite and falls back to static kana questions
+- Gemini structured-output generation runs in the background after coverage checks
 - Missed practice questions are reinserted once later in the same session
 - Kana progress model added: `new`, `introduced`, `practicing`, `learned`
 - Practice attempts now persist to `practice_attempts`
@@ -167,17 +157,16 @@ Done:
 
 Verified:
 
-- `npm run lint`
-- `npm run build`
-- `npm run db:seed`
-- Route checks for `/dashboard`, `/learn/kana`, and `/lesson/hiragana-vowels`
+- `npm run lint` — clean
+- `npm run build` — 27 routes, 0 errors
 
 Next likely work:
 
-- Update daily stats and streaks after practice
-- Add richer library filters and search
-- Expand practice beyond kana into N5 vocabulary, kanji, grammar, and sentences
-- Add richer learned-content selection for Agent Practice beyond the starter N5 pack
+- Udpate daily stats and streaks after practice
+- Question retirement: mark overused questions as retired to auto-refresh the generation pool
+- N5 lesson unlock progression by previous-lesson mastery
+- Expand generated-question content packs beyond starter N5 scope
+- Wire up review route
 
 ## Project Context
 

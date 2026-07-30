@@ -1,20 +1,13 @@
-import { Brain } from "lucide-react";
-import { AppShell } from "@/components/layout/app-shell";
-import { KanaPracticePage } from "@/components/practice/kana-practice-page";
+import { redirect } from "next/navigation";
 
-export default function KanaPracticeRoutePage() {
-  return (
-    <AppShell>
-      <div className="space-y-6">
-        <div>
-          <div className="mb-3 flex size-10 items-center justify-center rounded-md bg-secondary text-secondary-foreground">
-            <Brain className="size-5" />
-          </div>
-          <h1 className="text-3xl font-semibold">Kana Practice</h1>
-          <p className="mt-2 max-w-2xl text-muted-foreground">Practice introduced kana with mixed typing, matching, audio recognition, reorder, and multiple choice.</p>
-        </div>
-        <KanaPracticePage />
-      </div>
-    </AppShell>
-  );
+type KanaPracticeRoutePageProps = {
+  searchParams?: Promise<{
+    lessonIds?: string | string[];
+  }>;
+};
+
+export default async function KanaPracticeRoutePage({ searchParams }: KanaPracticeRoutePageProps) {
+  const params = await searchParams;
+  const value = Array.isArray(params?.lessonIds) ? params.lessonIds.join(",") : params?.lessonIds;
+  redirect(value ? `/practice?lessonIds=${encodeURIComponent(value)}` : "/practice");
 }

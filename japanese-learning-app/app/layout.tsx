@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
+import { GeistSans, GeistMono } from "geist/font";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
+
+const geistSansVariable = GeistSans.variable;
+const geistMonoVariable = GeistMono.variable;
 
 export const metadata: Metadata = {
   title: "Kana Path",
@@ -15,7 +19,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="h-full antialiased"
+      className={`${geistSansVariable} ${geistMonoVariable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <TooltipProvider>{children}</TooltipProvider>

@@ -1440,54 +1440,47 @@ Current mixed practice behavior:
   * match pairs
   * type answer
   * audio recognition
-  * sentence reorder / romaji block reorder
 * Kana practice avoids romaji-to-kana typed answers because there is no Japanese keyboard or writing input yet.
 * Fill-blank grammar/sentence practice is deferred until sentence content can be generated or authored correctly.
 * Multiple choice gives immediate feedback after selecting one answer.
 * Type answer can resolve as soon as the normalized answer matches, or when Enter / Check is used.
-* Audio recognition asks for romaji after listening, without showing the kana character.
+* Audio recognition auto-plays once when shown, asks for romaji after listening, and keeps a large replay button.
 * Match pairs uses two separated columns for Japanese and romaji; each selected pair is judged immediately.
-* Sentence reorder moves selected blocks into the answer string and resolves when the built answer reaches the expected length.
+* Wrong match pairs are highlighted and explained, but the learner continues matching the rest of the pairs before moving on.
+* Wrong non-matching answers show the correct answer and wait for the learner to press Next.
 * Wrong answers are shown again once later in the same session.
 * `/practice` without manual selection uses introduced/practicing kana only.
-* Manually selected practice from `/learn/kana` uses exactly the selected lesson rows, even if some kana are already learned.
+* Manually selected practice from `/learn/kana` routes to `/practice` and uses exactly the selected lesson rows, even if some kana are already learned.
 * If no introduced/practicing kana remain in `/practice`, the app shows that everything learned so far has been mastered.
 
 ---
 
-## **34\. Implementation Update: Agent Practice MVP**
+## **34\. Implementation Update: Unified Background-Generated Practice**
 
-The Practice area is split into two paths:
+Practice is one unified user-facing session at `/practice`.
 
-* Kana Practice
-* Agent Practice
+It starts immediately using introduced/practicing kana and any valid generated questions already stored locally. It never waits for a Gemini request.
 
-Kana Practice keeps the existing static/manual kana practice flow and lives at `/practice/kana`.
-
-Agent Practice is a new generated N5 practice path at `/practice/agent`.
-
-Agent Practice uses LM Studio through a local OpenAI-compatible API:
+Gemini background generation uses:
 
 ```env
-AI_PROVIDER=lmstudio
-LM_STUDIO_BASE_URL=http://127.0.0.1:1234
-LM_STUDIO_MODEL=qwen2.5-7b-instruct-mlx
-LM_STUDIO_API_KEY=lm-studio
-AI_REQUEST_TIMEOUT_MS=120000
-AI_MAX_OUTPUT_TOKENS=1400
+GEMINI_API_KEY=your-gemini-api-key
+GEMINI_SIMPLE_MODEL=gemini-2.5-flash-lite
+GEMINI_STRONG_MODEL=gemini-2.5-flash
 ```
 
-Agent Practice v1:
+Current architecture:
 
-* uses a scoped local N5 starter content pack
-* asks for structured JSON only
-* targets 6 final questions from up to 8 candidates while local generation stabilizes
-* gives LM Studio at least 120 seconds to respond, configurable with `AI_REQUEST_TIMEOUT_MS`
-* caps generated output with `AI_MAX_OUTPUT_TOKENS` to keep responses bounded
-* validates generated questions before rendering
-* supports multiple choice, sentence reorder, and fill blank
-* rejects invalid JSON, invalid question shapes, duplicate prompts, unknown types, bad reorder blocks, and obviously weak starter sentences
-* shows friendly errors if LM Studio is unavailable or output validation fails
-* supports an explicit development mock fallback only when `AGENT_PRACTICE_MOCK=true`
+* completing a Kana Learn row runs one coverage check for the full introduced row chunk
+* individual kana practice answers do not trigger Gemini generation
+* recently completed row jobs have a cooldown to prevent repeated low-coverage calls
+* fewer than 3 usable stored questions can enqueue a deduplicated local generation job
+* Gemini Flash-Lite is used first and Gemini Flash is the validation/retry fallback
+* Gemini uses structured output with a response JSON schema
+* app-side validation remains strict before storage
+* active generated questions and usage metadata are stored in `generated_practice_questions`
+* pending/running/completed/failed work is tracked in `question_generation_jobs`
+* generated questions respect learned-kanji scope; no learned kanji means kana-only output
+* existing static kana practice remains the fallback when generated questions are unavailable
 
-This is intentionally not a chatbot, voice tutor, handwriting feature, auth system, or cloud AI integration.
+This is intentionally not a chatbot, voice tutor, handwriting feature, image feature, auth system, or cloud sync integration.

@@ -1,4 +1,34 @@
 [
   { "id": "n5_vocab_watashi", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-self-introduction", "japanese": "私", "reading": "わたし", "romaji": "watashi", "meaning": "I; me", "metadata": { "partOfSpeech": "pronoun" } },
-  { "id": "n5_vocab_gakusei", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-self-introduction", "japanese": "学生", "reading": "がくせい", "romaji": "gakusei", "meaning": "student", "metadata": { "partOfSpeech": "noun" } }
+  { "id": "n5_vocab_gakusei", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-self-introduction", "japanese": "学生", "reading": "がくせい", "romaji": "gakusei", "meaning": "student", "metadata": { "partOfSpeech": "noun" } },
+  { "id": "n5_vocab_sensei", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-self-introduction", "japanese": "先生", "reading": "せんせい", "romaji": "sensei", "meaning": "teacher; doctor", "metadata": { "partOfSpeech": "noun" } },
+  { "id": "n5_vocab_tomodachi", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-self-introduction", "japanese": "友達", "reading": "ともだち", "romaji": "tomodachi", "meaning": "friend", "metadata": { "partOfSpeech": "noun" } },
+  { "id": "n5_vocab_nihongo", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-self-introduction", "japanese": "日本語", "reading": "にほんご", "romaji": "nihongo", "meaning": "Japanese language", "metadata": { "partOfSpeech": "noun" } },
+  { "id": "n5_vocab_hajimemashite", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-self-introduction", "japanese": "初めまして", "reading": "はじめまして", "romaji": "hajimemashite", "meaning": "Nice to meet you", "metadata": { "partOfSpeech": "phrase" } },
+
+  { "id": "n5_vocab_asa", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-daily-life", "japanese": "朝", "reading": "あさ", "romaji": "asa", "meaning": "morning", "metadata": { "partOfSpeech": "noun" } },
+  { "id": "n5_vocab_hiru", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-daily-life", "japanese": "昼", "reading": "ひる", "romaji": "hiru", "meaning": "afternoon; noon", "metadata": { "partOfSpeech": "noun" } },
+  { "id": "n5_vocab_yoru", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-daily-life", "japanese": "夜", "reading": "よる", "romaji": "yoru", "meaning": "night; evening", "metadata": { "partOfSpeech": "noun" } },
+  { "id": "n5_vocab_ie", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-daily-life", "japanese": "家", "reading": "いえ", "romaji": "ie", "meaning": "house; home", "metadata": { "partOfSpeech": "noun" } },
+  { "id": "n5_vocab_machi", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-daily-life", "japanese": "町", "reading": "まち", "romaji": "machi", "meaning": "town; city", "metadata": { "partOfSpeech": "noun" } },
+  { "id": "n5_vocab_kaisha", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-daily-life", "japanese": "会社", "reading": "かいしゃ", "romaji": "kaisha", "meaning": "company; office", "metadata": { "partOfSpeech": "noun" } },
+  { "id": "n5_vocab_gakkou", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-daily-life", "japanese": "学校", "reading": "がっこう", "romaji": "gakkou", "meaning": "school", "metadata": { "partOfSpeech": "noun" } },
+  { "id": "n5_vocab_ie_deru", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-daily-life", "japanese": "出る", "reading": "でる", "romaji": "deru", "meaning": "to leave; to go out", "metadata": { "partOfSpeech": "verb" } },
+
+  { "id": "n5_vocab_taberu", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-food-drink", "japanese": "食べる", "reading": "たべる", "romaji": "taberu", "meaning": "to eat", "metadata": { "partOfSpeech": "verb" } },
+  { "id": "n5_vocab_nomu", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-food-drink", "japanese": "飲む", "reading": "のむ", "romaji": "nomu", "meaning": "to drink", "metadata": { "partOfSpeech": "verb" } },
+  { "id": "n5_vocab_gohan", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-food-drink", "japanese": "ご飯", "reading": "ごはん", "romaji": "gohan", "meaning": "rice; meal", "metadata": { "partOfSpeech": "noun" } },
+  { "id": "n5_vocab_pan", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-food-drink", "japanese": "パン", "reading": "パン", "romaji": "pan", "meaning": "bread", "metadata": { "partOfSpeech": "noun" } },
+  { "id": "n5_vocab_mizu", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-food-drink", "japanese": "水", "reading": "みず", "romaji": "mizu", "meaning": "water", "metadata": { "partOfSpeech": "noun" } },
+  { "id": "n5_vocab_ocha", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-food-drink", "japanese": "お茶", "reading": "おちゃ", "romaji": "ocha", "meaning": "tea", "metadata": { "partOfSpeech": "noun" } },
+  { "id": "n5_vocab_kudamono", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-food-drink", "japanese": "果物", "reading": "くだもの", "romaji": "kudamono", "meaning": "fruit", "metadata": { "partOfSpeech": "noun" } },
+
+  { "id": "n5_vocab_iku", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-basic-verbs", "japanese": "行く", "reading": "いく", "romaji": "iku", "meaning": "to go", "metadata": { "partOfSpeech": "verb" } },
+  { "id": "n5_vocab_kuru", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-basic-verbs", "japanese": "来る", "reading": "くる", "romaji": "kuru", "meaning": "to come", "metadata": { "partOfSpeech": "verb" } },
+  { "id": "n5_vocab_suru", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-basic-verbs", "japanese": "する", "reading": "する", "romaji": "suru", "meaning": "to do", "metadata": { "partOfSpeech": "verb" } },
+  { "id": "n5_vocab_miru", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-basic-verbs", "japanese": "見る", "reading": "みる", "romaji": "miru", "meaning": "to see; to watch", "metadata": { "partOfSpeech": "verb" } },
+  { "id": "n5_vocab_kiku", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-basic-verbs", "japanese": "聞く", "reading": "きく", "romaji": "kiku", "meaning": "to hear; to ask", "metadata": { "partOfSpeech": "verb" } },
+  { "id": "n5_vocab_hanasu", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-basic-verbs", "japanese": "話す", "reading": "はなす", "romaji": "hanasu", "meaning": "to speak; to talk", "metadata": { "partOfSpeech": "verb" } },
+  { "id": "n5_vocab_yomu", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-basic-verbs", "japanese": "読む", "reading": "よむ", "romaji": "yomu", "meaning": "to read", "metadata": { "partOfSpeech": "verb" } },
+  { "id": "n5_vocab_kaku", "type": "vocab", "level": "N5", "moduleId": "jlpt-n5", "lessonId": "n5-basic-verbs", "japanese": "書く", "reading": "かく", "romaji": "kaku", "meaning": "to write", "metadata": { "partOfSpeech": "verb" } }
 ]

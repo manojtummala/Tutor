@@ -30,5 +30,8 @@
   { "id": "kana-long-vowels", "moduleId": "kana-foundations", "title": "Long Vowels", "description": "Learn long-vowel notation, including the katakana long sound mark.", "orderIndex": 27, "lessonType": "kana", "isUnlocked": false },
   { "id": "kana-similar-looking", "moduleId": "kana-foundations", "title": "Similar-looking Kana", "description": "Practice pairs that are easy to confuse.", "orderIndex": 28, "lessonType": "kana", "isUnlocked": false },
 
-  { "id": "n5-self-introduction", "moduleId": "jlpt-n5", "title": "Self Introduction", "description": "Starter N5 words, grammar, and sentences for introducing yourself.", "orderIndex": 1, "lessonType": "mixed", "isUnlocked": false }
+  { "id": "n5-self-introduction", "moduleId": "jlpt-n5", "title": "Self Introduction", "description": "Starter N5 words, grammar, and sentences for introducing yourself.", "orderIndex": 1, "lessonType": "mixed", "isUnlocked": true },
+  { "id": "n5-daily-life", "moduleId": "jlpt-n5", "title": "Daily Life", "description": "Common vocabulary, kanji, and phrases for everyday life.", "orderIndex": 2, "lessonType": "mixed", "isUnlocked": true },
+  { "id": "n5-food-drink", "moduleId": "jlpt-n5", "title": "Food & Drink", "description": "Vocabulary and expressions for food, drink, and eating out.", "orderIndex": 3, "lessonType": "mixed", "isUnlocked": false },
+  { "id": "n5-basic-verbs", "moduleId": "jlpt-n5", "title": "Basic Verbs", "description": "Essential verbs and conjugations for N5 level.", "orderIndex": 4, "lessonType": "mixed", "isUnlocked": false }
 ]

@@ -5,18 +5,30 @@ import { CheckCircle2, Layers, MousePointer2, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import type { GeneratedPracticeQuestion } from "@/lib/practice/agent-practice-types";
+import type { GeneratedPracticeQuestion } from "@/lib/practice/generated-practice-types";
 
 function normalizeAnswer(value: string | string[]) {
   return Array.isArray(value) ? value.join("") : value.trim();
 }
 
-export function AgentPracticeSession({ questions, onRestart }: { questions: GeneratedPracticeQuestion[]; onRestart: () => void }) {
+export function GeneratedPracticeSession({
+  questions,
+  onRestart,
+  onAnswer,
+}: {
+  questions: GeneratedPracticeQuestion[];
+  onRestart: () => void;
+  onAnswer?: (questionId: string, isCorrect: boolean) => void;
+}) {
   const [index, setIndex] = useState(0);
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
   const [typedAnswer, setTypedAnswer] = useState("");
   const [reorderAnswer, setReorderAnswer] = useState<string[]>([]);
   const [remainingBlocks, setRemainingBlocks] = useState<string[] | null>(null);
+  const [selectedMatchBlock, setSelectedMatchBlock] = useState<string | null>(null);
+  const [selectedMatchChoice, setSelectedMatchChoice] = useState<string | null>(null);
+  const [matchedBlocks, setMatchedBlocks] = useState<string[]>([]);
+  const [matchedChoices, setMatchedChoices] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<"correct" | "incorrect" | null>(null);
   const [score, setScore] = useState(0);
 
@@ -29,11 +41,18 @@ export function AgentPracticeSession({ questions, onRestart }: { questions: Gene
     setTypedAnswer("");
     setReorderAnswer([]);
     setRemainingBlocks(null);
+    setSelectedMatchBlock(null);
+    setSelectedMatchChoice(null);
+    setMatchedBlocks([]);
+    setMatchedChoices([]);
     setFeedback(null);
   }
 
   function resolve(isCorrect: boolean) {
     setFeedback(isCorrect ? "correct" : "incorrect");
+    if (question) {
+      onAnswer?.(question.id, isCorrect);
+    }
     if (isCorrect) {
       setScore((value) => value + 1);
     }
@@ -67,16 +86,35 @@ export function AgentPracticeSession({ questions, onRestart }: { questions: Gene
     }
   }
 
+  function judgeMatch(block: string | null, choice: string | null) {
+    if (!question || !block || !choice || feedback || !Array.isArray(question.correctAnswer)) return;
+    const isCorrect = question.correctAnswer.includes(`${block}=${choice}`);
+    setSelectedMatchBlock(null);
+    setSelectedMatchChoice(null);
+
+    if (!isCorrect) {
+      resolve(false);
+      return;
+    }
+
+    const next = [...matchedBlocks, block];
+    setMatchedBlocks(next);
+    setMatchedChoices((current) => [...current, choice]);
+    if (next.length === (question.blocks?.length ?? 0)) {
+      resolve(true);
+    }
+  }
+
   if (!question) {
     return (
       <Card className="rounded-md bg-white/90">
         <CardContent className="space-y-4 p-6">
           <CheckCircle2 className="size-8 text-primary" />
           <div>
-            <p className="text-xl font-semibold">Agent Practice complete</p>
+            <p className="text-xl font-semibold">Generated questions complete</p>
             <p className="text-sm text-muted-foreground">Score: {score} / {questions.length}</p>
           </div>
-          <Button onClick={onRestart}>Generate another session</Button>
+          <Button onClick={onRestart}>Continue practice</Button>
         </CardContent>
       </Card>
     );
@@ -86,7 +124,7 @@ export function AgentPracticeSession({ questions, onRestart }: { questions: Gene
     <Card className="rounded-md bg-white/95 shadow-sm">
       <CardHeader className="space-y-3">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <CardTitle>Agent Practice</CardTitle>
+          <CardTitle>Practice</CardTitle>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <span>{question.type.replace("_", " ")}</span>
             <span>{index + 1} / {questions.length}</span>
@@ -123,6 +161,43 @@ export function AgentPracticeSession({ questions, onRestart }: { questions: Gene
                 <Button key={`${block}-${blockIndex}`} variant="secondary" onClick={() => chooseBlock(block, blockIndex)} disabled={Boolean(feedback)}>
                   <Layers className="size-4" />
                   {block}
+                </Button>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
+        {question.type === "match_pairs" ? (
+          <div className="grid gap-6 sm:grid-cols-2">
+            <div className="space-y-2">
+              {question.blocks?.map((block) => (
+                <Button
+                  key={block}
+                  variant={matchedBlocks.includes(block) || selectedMatchBlock === block ? "default" : "secondary"}
+                  disabled={matchedBlocks.includes(block) || Boolean(feedback)}
+                  onClick={() => {
+                    setSelectedMatchBlock(block);
+                    judgeMatch(block, selectedMatchChoice);
+                  }}
+                  className="w-full"
+                >
+                  {block}
+                </Button>
+              ))}
+            </div>
+            <div className="space-y-2">
+              {question.choices?.map((choice) => (
+                <Button
+                  key={choice}
+                  variant={matchedChoices.includes(choice) || selectedMatchChoice === choice ? "default" : "secondary"}
+                  disabled={matchedChoices.includes(choice) || Boolean(feedback)}
+                  onClick={() => {
+                    setSelectedMatchChoice(choice);
+                    judgeMatch(selectedMatchBlock, choice);
+                  }}
+                  className="w-full"
+                >
+                  {choice}
                 </Button>
               ))}
             </div>

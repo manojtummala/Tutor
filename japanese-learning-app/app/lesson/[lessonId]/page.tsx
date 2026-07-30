@@ -37,7 +37,7 @@ export default async function LessonPage({ params }: { params: Promise<{ lessonI
         </section>
         <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
           {items.map((item) => (
-            <Card key={item.id} className="rounded-md bg-white/90">
+            <Card key={item.id} className="rounded-2xl border-0 bg-white shadow-sm">
               <CardContent className="p-4">
                 <div className="mb-3 flex items-center justify-between">
                   <StatusBadge status={item.status} />
@@ -46,7 +46,7 @@ export default async function LessonPage({ params }: { params: Promise<{ lessonI
                     <CheckCircle2 className="size-4 text-muted-foreground" />
                   </div>
                 </div>
-                <div className="mb-3 flex h-24 items-center justify-center rounded-md bg-muted text-5xl font-semibold">{item.japanese}</div>
+                <div className="mb-3 flex h-24 items-center justify-center rounded-xl bg-muted text-5xl font-semibold">{item.japanese}</div>
                 <p className="font-semibold">{item.romaji ?? item.reading}</p>
                 <p className="text-sm text-muted-foreground">{item.metadata.script ? `${item.metadata.script}` : item.meaning}</p>
               </CardContent>

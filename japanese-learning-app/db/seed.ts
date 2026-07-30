@@ -9,7 +9,17 @@ import n5VocabularyData from "@/data/jlpt/n5_vocab.json";
 import n5KanjiData from "@/data/jlpt/n5_kanji.json";
 import n5GrammarData from "@/data/jlpt/n5_grammar.json";
 import n5SentencesData from "@/data/jlpt/n5_sentences.json";
-import { dailyStats, learningItems, lessons, modules, practiceAttempts, streaks, userItemProgress } from "./schema";
+import {
+  dailyStats,
+  generatedPracticeQuestions,
+  learningItems,
+  lessons,
+  modules,
+  practiceAttempts,
+  questionGenerationJobs,
+  streaks,
+  userItemProgress,
+} from "./schema";
 
 const sqlite = new Database("local.db");
 const db = drizzle(sqlite);
@@ -97,6 +107,46 @@ function createTables() {
       created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
     );
 
+    CREATE TABLE IF NOT EXISTS generated_practice_questions (
+      id TEXT PRIMARY KEY,
+      chunk_key TEXT NOT NULL,
+      type TEXT NOT NULL,
+      level TEXT NOT NULL,
+      prompt TEXT NOT NULL,
+      choices_json TEXT,
+      blocks_json TEXT,
+      correct_answer_json TEXT NOT NULL,
+      natural_sentence TEXT,
+      explanation TEXT NOT NULL,
+      source_item_ids_json TEXT NOT NULL,
+      script_mode TEXT NOT NULL,
+      kanji_used_json TEXT NOT NULL,
+      status TEXT NOT NULL DEFAULT 'active',
+      model TEXT NOT NULL,
+      times_shown INTEGER NOT NULL DEFAULT 0,
+      times_correct INTEGER NOT NULL DEFAULT 0,
+      created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+    );
+
+    CREATE INDEX IF NOT EXISTS generated_practice_questions_chunk_status_idx
+      ON generated_practice_questions(chunk_key, status);
+
+    CREATE TABLE IF NOT EXISTS question_generation_jobs (
+      id TEXT PRIMARY KEY,
+      chunk_key TEXT NOT NULL,
+      source_item_ids_json TEXT NOT NULL,
+      status TEXT NOT NULL DEFAULT 'pending',
+      model TEXT,
+      attempt_count INTEGER NOT NULL DEFAULT 0,
+      error TEXT,
+      created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+    );
+
+    CREATE INDEX IF NOT EXISTS question_generation_jobs_chunk_status_idx
+      ON question_generation_jobs(chunk_key, status);
+
     CREATE TABLE IF NOT EXISTS daily_stats (
       date TEXT PRIMARY KEY,
       xp INTEGER NOT NULL DEFAULT 0,
@@ -140,6 +190,8 @@ function createTables() {
 async function seed() {
   createTables();
 
+  await db.delete(questionGenerationJobs);
+  await db.delete(generatedPracticeQuestions);
   await db.delete(userItemProgress);
   await db.delete(practiceAttempts);
   await db.delete(learningItems);
