@@ -1484,3 +1484,34 @@ Current architecture:
 * existing static kana practice remains the fallback when generated questions are unavailable
 
 This is intentionally not a chatbot, voice tutor, handwriting feature, image feature, auth system, or cloud sync integration.
+
+---
+
+## **35\. Implementation Update: N5 Learning Flow**
+
+The N5 module now has a real learning flow instead of a content preview shell.
+
+N5 lessons:
+
+* Self Introduction (unlocked)
+* Daily Life (unlocked)
+* Food & Drink (locked)
+* Basic Verbs (locked)
+
+Content seeded across the four lessons:
+
+* 29 vocabulary entries
+* 19 kanji entries
+* 12 grammar entries
+* 15 sentence entries
+
+Learning flow:
+
+* `/learn/n5` lists lesson cards with badges showing item-type counts (vocab/kanji/grammar/sentences) and real completion % computed from `user_item_progress`.
+* Starting a lesson opens a card-sequence intro (`n5-item-cards.tsx`): one item per card showing japanese, reading, meaning, explanation, and grammar examples.
+* Completing the card sequence posts to `POST /api/items/progress` with the lesson's item IDs.
+* `POST /api/items/progress` marks items as `introduced` (unless already progressed) and triggers `queueQuestionGenerationIfNeeded` for Gemini background generation.
+* Users can select multiple N5 lessons and start a scored practice session routed to `/practice?lessonIds=...`.
+* The dashboard computes real N5 progress from introduced/practicing/learned item counts.
+
+This keeps the N5 learning factor explicit (card-based first exposure) while reusing the same background generation pipeline used by kana.

@@ -69,6 +69,11 @@ npm rebuild better-sqlite3
 - Kana lessons use a spotlight flow for initial exposure.
 - Completing a learning spotlight introduces the items and updates `user_item_progress`.
 - Users can select lesson rows in `/learn/kana`; starting practice routes them to `/practice?lessonIds=...`.
+- `/learn/n5` is the JLPT N5 module with 4 lessons (Self Introduction, Daily Life, Food & Drink, Basic Verbs).
+- N5 lessons use a card-sequence intro (one item per card showing japanese, reading, meaning, explanation, grammar examples).
+- Completing an N5 card sequence posts to `POST /api/items/progress` to mark items introduced and trigger question generation.
+- N5 lesson cards show real completion % computed from `user_item_progress`.
+- Users can select N5 lessons for practice, routing to `/practice?lessonIds=...`.
 
 ### Unified Practice
 
@@ -97,8 +102,8 @@ Do not add kana reorder questions; kana answers are generally single readings.
 
 ### Reviews
 
-- `/review` is separate from scored Practice.
-- Kana review uses flip cards without SRS rating buttons.
+- `/review` currently redirects to `/dashboard` (deferred).
+- Kana review flip-card components exist (`kana-review-session.tsx`) but are not wired to a route yet.
 - SRS helpers remain available for later vocabulary and kanji work.
 
 ## Gemini Background Generation

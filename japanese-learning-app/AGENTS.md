@@ -14,7 +14,7 @@
 - `components/learn/n5-learn-client.tsx` — new N5 lesson page client component
 - `components/learn/n5-item-cards.tsx` — new card-sequence intro for N5 items
 - `data/lessons.json` — added 3 new N5 lessons (daily-life, food-drink, basic-verbs)
-- `data/jlpt/n5_vocab.json` — expanded to 26 entries across 4 lessons
+- `data/jlpt/n5_vocab.json` — expanded to 29 entries across 4 lessons
 - `data/jlpt/n5_kanji.json` — expanded to 19 entries across 4 lessons
 - `data/jlpt/n5_grammar.json` — expanded to 12 entries across 4 lessons
 - `data/jlpt/n5_sentences.json` — expanded to 15 entries across 4 lessons

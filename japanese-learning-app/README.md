@@ -154,6 +154,13 @@ Done:
 - Item status updates now persist to `user_item_progress`
 - Practice, review, progress, and settings shells added
 - SRS, XP, streak, progress, and practice helper files added
+- N5 module has 4 lessons with card-sequence intro (vocab/kanji/grammar/sentences)
+- `POST /api/items/progress` marks N5 items introduced and triggers Gemini background generation
+- N5 lesson cards show real completion % from the database
+- Dashboard shows real N5 progress
+- Dashboard shows real DB stats (streak, daily goal XP, progress rings)
+- Library has search, type filters, and script filters
+- Settings has daily goal, theme toggle, and reset progress
 
 Verified:
 
@@ -162,7 +169,7 @@ Verified:
 
 Next likely work:
 
-- Udpate daily stats and streaks after practice
+- Update daily stats and streaks after practice
 - Question retirement: mark overused questions as retired to auto-refresh the generation pool
 - N5 lesson unlock progression by previous-lesson mastery
 - Expand generated-question content packs beyond starter N5 scope
